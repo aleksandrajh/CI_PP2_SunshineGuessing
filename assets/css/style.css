@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
     border: none;
-    font-size: 100%;
+    font-size: 105%;
 }
 
 body {
@@ -39,7 +39,7 @@ body::before {
     text-align: center;
     color: var(--navy-blue);
     text-transform: uppercase;
-    width: 90%;
+    width: 80%;
     height: 30rem;
     max-height: 30rem;
     max-width: 40rem;
@@ -69,6 +69,11 @@ body::before {
     font-size: 250%;
 }
 
+#back {
+    font-size: 150%;
+    display: none;
+}
+
 #username {
     font-size: 100%;
     font-weight: bold;
@@ -79,4 +84,39 @@ body::before {
 
 button {
     background: none !important;
+}
+
+
+.user-input input,
+.user-input label {
+    font-size: 100%;
+    margin-bottom: 1rem;
+    border-radius: 0.3rem;
+}
+.user-input input {
+    box-shadow: 1px 1px 10px var(--loblolly);
+    border: 1px solid var(--loblolly);
+}
+
+.user-log-error {
+    font-size: 90%;
+    color: var(--pink);
+    padding-top: 3rem;
+}
+
+
+#choose-level {
+    display: none;
+}
+
+#game-screen {
+    display: none;
+}
+
+#correct-screen {
+    display: none;
+}
+
+#wrong-screen {
+    display: none;
 }
