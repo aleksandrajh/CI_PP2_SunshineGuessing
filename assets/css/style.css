@@ -17,7 +17,6 @@
 body {
     font-family: Arial, sans-serif;
     font-weight: 400;
-    color: var(--navy-blue);
 }
 
 body::before {
@@ -51,6 +50,7 @@ body::before {
 .top-line {
     line-height:3rem;
     text-align: right;
+    background: none !important;
 }
 
 .top-line p {
@@ -68,8 +68,12 @@ body::before {
 
 #username {
     font-size: 100%;
+    font-weight: bold;
     text-transform: none;
     margin-left: 2%;
     margin-bottom: 0;
 }
 
+button {
+    background: none !important;
+}
