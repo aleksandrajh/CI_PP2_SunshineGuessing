@@ -1,3 +1,11 @@
+:root {
+    --pink: #CF2857;
+    --navy-blue: #1B212B;
+    --ming:#395F7A;
+    --hoki: #6883A7;
+    --loblolly: #C4D0D7;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,3 +13,14 @@
     font-size: 100%;
 }
 
+body::before {
+    position: absolute;
+    content: "";
+    width: 100vw;
+    height: 100vh;
+    background: url(../images/clouds-background.jpg);
+    background-color: var(--hoki);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .7;
+}
