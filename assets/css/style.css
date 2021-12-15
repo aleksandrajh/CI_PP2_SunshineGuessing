@@ -13,6 +13,12 @@
     font-size: 100%;
 }
 
+body {
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    color: var(--navy-blue);
+}
+
 body::before {
     position: absolute;
     content: "";
@@ -23,4 +29,5 @@ body::before {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: .7;
+    z-index: -1;
 }
