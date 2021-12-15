@@ -45,6 +45,31 @@ body::before {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 2%;  
+    padding: 1%;
+}
+
+.top-line {
+    line-height:3rem;
+    text-align: right;
+}
+
+.top-line p {
+    float: left;
+}
+
+.user-icon {
+    font-size:250%; 
+    float:left;
+}
+
+.instruction-icon {
+    font-size: 250%;
+}
+
+#username {
+    font-size: 100%;
+    text-transform: none;
+    margin-left: 2%;
+    margin-bottom: 0;
 }
 
