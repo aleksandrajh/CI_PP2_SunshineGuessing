@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+
 
 :root {
     --pink: #CF2857;
@@ -85,6 +87,29 @@ body::before {
 button {
     background: none !important;
 }
+
+#game-title{
+    background: #FCEABB;
+    background: -webkit-repeating-linear-gradient(to right, #FCEABB 24%, #FCCD4D 13%, #F8B500 41%, #FBDF93 71%);
+    background: -moz-repeating-linear-gradient(to right, #FCEABB 24%, #FCCD4D 13%, #F8B500 41%, #FBDF93 71%);
+    background: repeating-linear-gradient(to right, #FCEABB 24%, #FCCD4D 13%, #F8B500 41%, #FBDF93 71%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Rammetto One', cursive;
+
+    animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+  }
 
 
 .user-input input,
