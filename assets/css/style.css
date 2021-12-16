@@ -28,7 +28,7 @@ body::before {
     content: "";
     width: 100vw;
     height: 100vh;
-    background: url(../images/clouds-background.jpg);
+    background: url(../images/clouds-background-resized.jpg);
     background-color: var(--sky);
     background-repeat: no-repeat;
     background-size: cover;
