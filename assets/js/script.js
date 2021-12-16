@@ -19,6 +19,7 @@ function runMainScreen() {
     document.getElementById("username").innerText = "";
     document.getElementById("user").focus();
     mainLoginScreen.style.display = "block";
+    instructionsScreen.style.display = "none";
 }
 
 /**
@@ -30,3 +31,6 @@ function showInstructions() {
     instructionsScreen.style.display = "block";
     mainLoginScreen.style.display = "none";
 }
+
+document.getElementById("close-instructions").addEventListener("click", runMainScreen);
+
