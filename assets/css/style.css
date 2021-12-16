@@ -129,11 +129,6 @@ body::before {
     padding: 0.7rem;
 }
 
-.user-log-error {
-    font-size: 90%;
-    color: var(--pink);
-    padding-top: 1.2rem;
-}
 
 .button {
     background: linear-gradient(to right, var(--light-orange), var(--orange)) !important;
@@ -147,6 +142,16 @@ body::before {
 
 .button:hover {
     background: linear-gradient(to right, var(--orange), var(--light-orange)) !important;
+}
+
+.user-log-error {
+    font-size: 90%;
+    color: var(--pink);
+    padding-top: 1.2rem;
+}
+
+#error-message {
+    display: none;
 }
 
 #choose-level {
