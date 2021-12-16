@@ -90,7 +90,7 @@ body::before {
     margin-bottom: 0;
 }
 
-#instructions, #back {
+#instructions-icon, #back {
     background: none !important;
 }
 

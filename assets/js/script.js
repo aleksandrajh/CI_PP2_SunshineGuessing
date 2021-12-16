@@ -5,6 +5,10 @@ document.addEventListener('DOMContentLoaded', function () {
     runMainScreen();
 });
 
+let mainLoginScreen = document.getElementById("login-screen");
+let instructionsScreen = document.getElementById("instructions-screen")
+let getInstructions = document.getElementById("instructions-icon");
+
 /**
 * Show the main screen with user log-in and start game
 */
@@ -14,14 +18,15 @@ function runMainScreen() {
     document.getElementById("back").style.display = "none";
     document.getElementById("username").innerText = "";
     document.getElementById("user").focus();
-    // showArea("login-area");
+    mainLoginScreen.style.display = "block";
 }
 
-let instructionsScreen = document.getElementById("instructions");
-
-instructionsScreen.addEventListener("click", showInstructions);
+/**
+* Show the game instructions
+*/
+getInstructions.addEventListener("click", showInstructions);
 
 function showInstructions() {
-    // instructionsScreen.style.display = "visible";
-    alert('it works');
+    instructionsScreen.style.display = "block";
+    mainLoginScreen.style.display = "none";
 }
