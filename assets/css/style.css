@@ -79,7 +79,7 @@ body::before {
 
 #back {
     font-size: 150%;
-    display: none;
+    display: inline-block;
 }
 
 #username {

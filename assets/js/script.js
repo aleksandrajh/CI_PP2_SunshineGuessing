@@ -9,6 +9,7 @@ let mainLoginScreen = document.getElementById("login-screen");
 let instructionsScreen = document.getElementById("instructions-screen")
 let getInstructions = document.getElementById("instructions-icon");
 let errorMessage = document.getElementById("error-message");
+goBack = document.getElementById("back");
 
 /**
 * Show the main screen with user log-in and start game
@@ -31,9 +32,11 @@ getInstructions.addEventListener("click", showInstructions);
 function showInstructions() {
     instructionsScreen.style.display = "block";
     mainLoginScreen.style.display = "none";
+    goBackArrow.style.display = "inline-block";
 }
 
 document.getElementById("close-instructions").addEventListener("click", runMainScreen);
+goBack.addEventListener("click", runMainScreen);
 
 
 // /**
@@ -52,6 +55,11 @@ document.getElementById("close-instructions").addEventListener("click", runMainS
 //     }
 // };
 
+
+/**
+ * Verification of the user name input on the login screen
+ */
+
 document.getElementById("user-log").addEventListener("click", checkUsername);
 
 function checkUsername() {
@@ -62,8 +70,7 @@ function checkUsername() {
         mainLoginScreen.style.display = "none";
         document.getElementById("user-icon").style.display = "block";
         document.getElementById("username").innerText = username;
-        console.log('correct username');
-        console.log(username);
+        goBack.style.display = "inline-block";
     } else {
         errorMessage.style.display = "block";
         document.getElementById("user").focus();
@@ -72,4 +79,11 @@ function checkUsername() {
 }
 checkUsername();
 
-
+/**
+ * Input of username using the enter key
+ */
+document.getElementById("user").addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        checkUsername();
+    }
+});
