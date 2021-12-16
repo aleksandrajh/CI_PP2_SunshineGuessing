@@ -69,6 +69,10 @@ body::before {
     float:left;
 }
 
+#user-icon {
+    display: none;
+}
+
 .instruction-icon {
     font-size: 250%;
 }
@@ -113,22 +117,22 @@ body::before {
   }
   }
 
-
 .user-input input,
 .user-input label {
     font-size: 100%;
     margin-bottom: 1rem;
-    border-radius: 0.3rem;
+    border-radius: 0.7rem;
 }
 .user-input input {
     box-shadow: 1px 1px 10px var(--loblolly);
     border: 1px solid var(--loblolly);
+    padding: 0.7rem;
 }
 
 .user-log-error {
     font-size: 90%;
     color: var(--pink);
-    padding-top: 2rem;
+    padding-top: 1.2rem;
 }
 
 .button {
@@ -137,7 +141,7 @@ body::before {
     font-size: 1rem;
     font-weight: bold;
     width: 35%;
-    border-radius: 10px;
+    border-radius: 0.7rem;
     box-shadow: 0 10px 20px -8px rgba(57,95,122,.7);
 }
 
