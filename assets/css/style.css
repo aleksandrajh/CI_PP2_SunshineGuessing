@@ -150,11 +150,15 @@ body::before {
     padding-top: 1.2rem;
 }
 
+#instructions-screen {
+    display: none;
+}
+
 #error-message {
     display: none;
 }
 
-#choose-level {
+#choose-level-screen {
     display: none;
 }
 
