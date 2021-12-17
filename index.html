@@ -93,16 +93,48 @@
             </div>
         </div>
 
-
-
-        <div id='correct-screen'>
-            Message displayed when user guesses the phrase
+        <div id="correct-screen">
+            <div>
+                <p>Brilliant, well done!</p>
+            </div>
+            <div class="result-image">
+                <img src="assets/images/correct-answer-full-sun.png" alt="A picture of happy sun with sunglasses">
+            </div>        
+            <div>
+                <button id="next" class="button">Next</button>
+                <button id="restart-game" class="button">Restart the game</button>
+            </div>
+            <div>
+                <p class="text-center">high score: <span id="high-score">0</span>
+                    <br>
+                    your score: <span id="score">0</span>
+                </p>
+            </div>
         </div>
 
-        <div id='wrong-screen'>
-            Game over. Message displayed when user did not guess the phrase
+        <div id="wrong-screen">
+            <div>
+                <p>Oh no, you lost.
+                    <br>
+                    The correct answer was: 
+                    <br> 
+                    <span id="answer"></span>
+                </p>
+            </div>
+            <div class="result-image">
+                <img src="assets/images/game-lost-cloud-rainy.png" alt="A picture of a sad and rainy cloud">
+            </div>        
+            <div>
+                <button id="try-again" class="button">Try again</button>
+                <button id="restart-game" class="button">Restart the game</button>
+            </div>
+            <div>
+                <p class="text-center">high score: <span id="high-score">0</span>
+                    <br>
+                    your score: <span id="score">0</span>
+                </p>
+            </div>
         </div>
-    </div>
     
     <script src="assets/js/script.js"></script>
     
