@@ -150,8 +150,8 @@ body::before {
     padding-top: 1.2rem;
 }
 
+/* Modal with game instructions */
 
-/** Modal Win screen **/
 .modal {
     display: none;
 }
@@ -159,7 +159,6 @@ body::before {
 .show-modal {
     color: var(--pink);
     width: 100%;
-    height: 30rem;
     height: 30rem;
     max-height: 30rem;
     max-width: 40rem;
@@ -174,9 +173,15 @@ body::before {
     display: block !important;
 }
 
+.greyout-background {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 #modal-header {
     font-weight: bold;
+    font-family: 'Rammetto One', cursive;
 }
+
 
 #instructions-screen {
     display: none;

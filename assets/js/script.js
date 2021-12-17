@@ -30,13 +30,15 @@ function runMainScreen() {
 getInstructions.addEventListener("click", showInstructions);
 
 function showInstructions() {
-    let modal = document.getElementById('myModal');
-    modal.classList.add('show-modal');
+    let modal = document.getElementById("myModal");
+    modal.classList.add("show-modal");
+    document.body.classList.add('greyout-background');
 };
 
 function closeModal() {
-    let modal = document.getElementById('myModal');
-    modal.classList.remove('show-modal');
+    let modal = document.getElementById("myModal");
+    modal.classList.remove("show-modal");
+    document.body.classList.remove('greyout-background');
 }
 
 /**
