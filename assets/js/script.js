@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 let mainLoginScreen = document.getElementById("login-screen");
-let instructionsScreen = document.getElementById("instructions-screen")
 let getInstructions = document.getElementById("instructions-icon");
 let errorMessage = document.getElementById("error-message");
 
@@ -21,7 +20,6 @@ function runMainScreen() {
     document.getElementById("username").innerText = "";
     document.getElementById("user").focus();
     mainLoginScreen.style.display = "block";
-    instructionsScreen.style.display = "none";
 }
 
 /**
