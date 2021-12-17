@@ -38,6 +38,12 @@ body::before {
     z-index: -1;
 }
 
+h3 {
+    margin-bottom: 1rem;
+    text-transform: none;
+    font-weight: 600;
+}
+
 #game-container {
     position: absolute;
     text-align: center;
@@ -69,17 +75,8 @@ body::before {
     float:left;
 }
 
-#user-icon {
-    display: none;
-}
-
 .instruction-icon {
     font-size: 250%;
-}
-
-#back {
-    font-size: 150%;
-    display: inline-block;
 }
 
 #username {
@@ -90,7 +87,7 @@ body::before {
     margin-bottom: 0;
 }
 
-#instructions-icon, #back {
+#instructions-icon {
     background: none !important;
 }
 
@@ -152,10 +149,6 @@ body::before {
 
 /* Modal with game instructions */
 
-.modal {
-    display: none;
-}
-
 .show-modal {
     color: var(--pink);
     width: 100%;
@@ -182,9 +175,8 @@ body::before {
     font-family: 'Rammetto One', cursive;
 }
 
-
-#instructions-screen {
-    display: none;
+.button-level {
+    width: 60%;
 }
 
 #error-message {
