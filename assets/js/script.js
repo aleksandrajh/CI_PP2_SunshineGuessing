@@ -9,7 +9,7 @@ let mainLoginScreen = document.getElementById("login-screen");
 let instructionsScreen = document.getElementById("instructions-screen")
 let getInstructions = document.getElementById("instructions-icon");
 let errorMessage = document.getElementById("error-message");
-goBack = document.getElementById("back");
+
 
 /**
 * Show the main screen with user log-in and start game
@@ -25,36 +25,19 @@ function runMainScreen() {
 }
 
 /**
-* Show the game instructions
-*/
+ * Show and close modal with game instructions
+ */
 getInstructions.addEventListener("click", showInstructions);
 
 function showInstructions() {
-    instructionsScreen.style.display = "block";
-    mainLoginScreen.style.display = "none";
-    goBackArrow.style.display = "inline-block";
+    let modal = document.getElementById('myModal');
+    modal.classList.add('show-modal');
+};
+
+function closeModal() {
+    let modal = document.getElementById('myModal');
+    modal.classList.remove('show-modal');
 }
-
-document.getElementById("close-instructions").addEventListener("click", runMainScreen);
-goBack.addEventListener("click", runMainScreen);
-
-
-// /**
-//  * Display specific screen
-//  */
-// function showScreen(screenName) {
-//     let screens = document.getElementsByClassName("screen");
-//     for (let screen of screens) {
-//         if (screen.id === screenName) {
-//             screen.style.display = "block";
-//             console.log('it works');
-//         } else {
-//             screen.style.display = "none";
-//             console.log('error');
-//         }
-//     }
-// };
-
 
 /**
  * Verification of the user name input on the login screen
@@ -70,7 +53,6 @@ function checkUsername() {
         mainLoginScreen.style.display = "none";
         document.getElementById("user-icon").style.display = "block";
         document.getElementById("username").innerText = username;
-        goBack.style.display = "inline-block";
     } else {
         errorMessage.style.display = "block";
         document.getElementById("user").focus();

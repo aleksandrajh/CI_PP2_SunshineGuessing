@@ -150,6 +150,34 @@ body::before {
     padding-top: 1.2rem;
 }
 
+
+/** Modal Win screen **/
+.modal {
+    display: none;
+}
+
+.show-modal {
+    color: var(--pink);
+    width: 100%;
+    height: 30rem;
+    height: 30rem;
+    max-height: 30rem;
+    max-width: 40rem;
+    align-items: center;
+    display: block;
+    z-index: 2;
+}
+
+.modal-content {
+    box-shadow: 1px 1px 20px var(--loblolly);
+    padding: 4%;
+    display: block !important;
+}
+
+#modal-header {
+    font-weight: bold;
+}
+
 #instructions-screen {
     display: none;
 }

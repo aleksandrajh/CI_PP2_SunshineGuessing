@@ -54,16 +54,19 @@
             </p>
         </div>
 
-        <div class="screen" id="instructions-screen">
-            <h2>How to play</h2>
-               <p>Guess the word or phrase by chosing one letter at a time.<br>
-                The more attempts you take, the cloudier it will get.<br>
-                You can continue picking letters until the sun gets covered.<br>
-                Watch out! Depending on the difficulty level you select, the rain may come faster than expected!<br>
-                <br>
-                Enjoy!
-            </p>
-            <button id="close-instructions" class="button">Close</button>
+
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <h2 id="modal-header">How to play</h2>
+                <p>Guess the word or phrase by chosing one letter at a time.<br>
+                    The more attempts you take, the cloudier it will get.<br>
+                    You can continue picking letters until the sun gets covered.<br>
+                    Watch out! Depending on the difficulty level you select, the rain may come faster than expected!<br>
+                    <br>
+                    Enjoy!
+                </p>
+                <button class="button" onclick="closeModal()">Close</button>
+            </div>
         </div>
 
         <div class="screen" id="choose-level-screen">
