@@ -179,6 +179,16 @@ h3 {
     width: 60%;
 }
 
+#sun-image {
+    width: 60%;
+}
+
+.image-result img {
+    width: 30%;
+    padding: 4% 0;
+}
+
+
 #error-message {
     display: none;
 }
