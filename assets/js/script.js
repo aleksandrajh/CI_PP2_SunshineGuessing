@@ -73,7 +73,7 @@ let images;
 let phrase = "";
 let highScore = 0;
 let score = 0;
-let wrongAnswersLeft = 0;
+let guessesLeft = 0;
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
@@ -120,6 +120,7 @@ function showKeyboard() {
         keyboard += `<button type="button" class="btn btn-primary py-1 px-2 m-1" id="key-${letter}">${letter}</button>`;
     }
     document.getElementById("keyboard").innerHTML = keyboard;
+    keyboardEventListeners();
 }
 
 function keyboardEventListeners() {
@@ -132,8 +133,9 @@ function keyboardEventListeners() {
             button.classList.remove("btn-primary");
             button.classList.add("btn-outline-primary", "clicked");
             button.disabled = true;
+            checkLetter(letter);
         }
-        console.log(letter);
+
     })
 
     document.addEventListener("keydown", function logKey(event) {
@@ -143,9 +145,39 @@ function keyboardEventListeners() {
         if (alphabet.includes(letterPressed) && !button.className.includes("pressed")) {
             button.classList.remove("btn-primary");
             button.classList.add("btn-outline-primary", "pressed");
-            console.log(letterPressed);
+            checkLetter(letterPressed);
         }
     });
 }
 
-keyboardEventListeners();
+
+function checkLetter(letter) {
+    if (phrase.includes(letter.toLowerCase()) || phrase.includes(letter)) {
+        addLetters(letter);
+    } else {
+        guessesLeft -= 1;
+        console.log("You lost 1 guess");
+        if (guessesLeft) {
+            // display relevant picture for number of guesses left
+        } else {
+            console.log("No guesses left");
+        }
+    }
+}
+
+function addLetters(guess) {
+    let phraseToGuess = document.getElementById("phrase").innerHTML;
+    let newPhrase = phraseToGuess.split("")
+        .map((x, index) => guess.toLowerCase() === phrase[index].toLowerCase() ? phrase[index] : x)
+        .join("");
+    ifPhraseIsGuessed(newPhrase);
+    document.getElementById("phrase").innerHTML = newPhrase;
+}
+
+function ifPhraseIsGuessed(currentPhrase) {
+    if (currentPhrase === phrase) {
+        console.log('Phrase has been guessed');
+    } else {
+        return;
+    }
+}
