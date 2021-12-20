@@ -1,4 +1,4 @@
-let gameSetup = (function () {
+let gameSetup = function () {
     let easyLevelImages = [
         'assets/images/sun-image-easy0.png',
         'assets/images/sun-image-easy1.png',
@@ -96,7 +96,7 @@ let gameSetup = (function () {
             'Requiem for a Dream'
         ],
 
-        buildings: [
+        building: [
             'La Sagrada Familia',
             'The Colosseum',
             'Empire State Building',
@@ -166,7 +166,7 @@ let gameSetup = (function () {
             'Hilton'
         ],
 
-        instruments: [
+        instrument: [
             'Saxophone',
             'Ukulele',
             'Electric Guitar',
@@ -188,4 +188,16 @@ let gameSetup = (function () {
             'Banjo',
             'Double Bass'
         ]
-    };
+    }
+
+    function showImages(gameType) {
+        if (gameType === 'easy') {
+            return easyLevelImages;
+        } else if (gameType === 'medium') {
+            return mediumLevelImages;
+        } else if (gameType === 'hard') {
+            return hardLevelImages;
+        } else {
+            throw new Error('Sorry, images do not exist.');
+        }
+    }

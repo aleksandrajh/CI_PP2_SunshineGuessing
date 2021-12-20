@@ -50,7 +50,7 @@
             <button class="button" id="user-log">Start Game</button>
             
             <p class="user-log-error" id="error-message">
-                Please try again. <br>Usernames must be between 1 and 12 characters.
+                Please try again. <br>Username must be between 1 and 12 characters.
             </p>
         </div>
 
@@ -71,9 +71,11 @@
 
         <div id="choose-level-screen">
             <h3>Choose difficulty level</h3>
-                <button data-type="easy" class="button button-level mb-4">Easy</button>
-                <button data-type="medium" class="button button-level mb-4">Medium</button>
-                <button data-type="hard" class="button button-level mb-4">Hard</button>
+            <div id="level-buttons">
+                <button data-type="easy" class="button button-level mb-4" type="button">Easy</button>
+                <button data-type="medium" class="button button-level mb-4" type="button">Medium</button>
+                <button data-type="hard" class="button button-level mb-4" type="button">Hard</button>
+            </div>
         </div>
 
         <div id="game-screen">
