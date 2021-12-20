@@ -1,4 +1,4 @@
-let gameSetup = function () {
+let gameSetup = (function () {
     let easyLevelImages = [
         'assets/images/sun-image-easy0.png',
         'assets/images/sun-image-easy1.png',
@@ -117,7 +117,6 @@ let gameSetup = function () {
             'Sydney Opera House',
             'Notre Dame',
             'Chrysler Building'
-
         ],
 
         proverb: [
@@ -201,3 +200,35 @@ let gameSetup = function () {
             throw new Error('Sorry, images do not exist.');
         }
     }
+
+
+    function getGuessingParameters() {
+        let category = getCategory();
+        let phrase = getPhrase(category);
+        return { category, phrase };
+    }
+
+    /**
+     * Randomly select a category for the game
+     */
+    function getCategory() {
+        let categories = Object.keys(phrases);
+        let num = Math.floor(Math.random() * categories.length);
+        return categories[num];
+    }
+
+    /**
+     * Randomly select a guessing phrase for the game
+     */
+
+    function getPhrase(category) {
+        let categoryPhrases = phrases[category];
+        let num = Math.floor(Math.random() * categoryPhrases.length);
+        return categoryPhrases[num];
+    }
+
+    return {
+        showImages,
+        getGuessingParameters
+    };
+})();
