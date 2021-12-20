@@ -79,12 +79,13 @@ h3, #category {
     font-size: 250%;
 }
 
-#username {
+#username, #difficulty-level {
     font-size: 100%;
     font-weight: bold;
     text-transform: none;
     margin-left: 2%;
     margin-bottom: 0;
+    display: inline-block;
 }
 
 #instructions-icon {
@@ -188,6 +189,12 @@ h3, #category {
     padding: 4% 0;
 }
 
+
+#game-screen p {
+    text-transform: none;
+    font-weight: 400;
+    display: inline;
+}
 
 #error-message {
     display: none;

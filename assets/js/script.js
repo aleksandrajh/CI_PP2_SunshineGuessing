@@ -83,7 +83,7 @@ for (let level of levels) {
 }
 
 function setGame(gameType) {
-    document.getElementById("difficulty-level").innerHTML = `<h3>Level chosen</h3>: ${gameType}`;
+    document.getElementById("difficulty-level").innerHTML = `Level: ${gameType}`;
     document.getElementById("high-score").innerHTML = highScore;
     document.getElementById("score").innerHTML = score;
 
@@ -94,7 +94,7 @@ function setGame(gameType) {
     document.getElementById("choose-level-screen").style.display = "none";
 
     setGuessingPhrase(phrase);
-
+    showKeyboard();
 }
 
 function setGuessingPhrase(phrase) {
@@ -119,6 +119,6 @@ function showKeyboard() {
     for (let letter of alphabet) {
         keyboard += `<button type="button" class="btn btn-primary py-1 px-2 m-1" id="key-${letter}">${letter}</button>`;
     }
-    document.getElementById('keyboard').innerHTML = keyboard;
+    document.getElementById("keyboard").innerHTML = keyboard;
 }
-showKeyboard();
+
