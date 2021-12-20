@@ -122,3 +122,17 @@ function showKeyboard() {
     document.getElementById("keyboard").innerHTML = keyboard;
 }
 
+function keyboardEventListeners() {
+    document.getElementById("keyboard").addEventListener('click', function (event) {
+        if (!event.target.className.includes("btn")) return;
+        let button = event.target;
+        let letter = button.innerHTML;
+        if (!button.clicked) {
+            button.classList.remove("btn-primary");
+            button.classList.add("btn-outline-primary");
+            button.disabled = true;
+        }
+        console.log(letter);
+    })
+};
+keyboardEventListeners();
