@@ -16,7 +16,6 @@ let errorMessage = document.getElementById("error-message");
 function runMainScreen() {
     errorMessage.style.display = "none";
     document.getElementById("user-icon").style.display = "none";
-    document.getElementById("back").style.display = "none";
     document.getElementById("username").innerText = "";
     document.getElementById("user").focus();
     mainLoginScreen.style.display = "block";
@@ -33,7 +32,7 @@ function showInstructions() {
     document.body.classList.add('greyout-background');
 };
 
-function closeModal() {
+function closeInstructions() {
     let modal = document.getElementById("myModal");
     modal.classList.remove("show-modal");
     document.body.classList.remove('greyout-background');
@@ -42,7 +41,6 @@ function closeModal() {
 /**
  * Verification of the user name input on the login screen
  */
-
 document.getElementById("user-log").addEventListener("click", checkUsername);
 
 function checkUsername() {
@@ -69,3 +67,30 @@ document.getElementById("user").addEventListener("keydown", function (event) {
         checkUsername();
     }
 });
+
+// Game's data
+let images;
+let phrase = "";
+let highScore = 0;
+let score = 0;
+let wrongAnswersLeft = 0;
+let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+
+let levels = document.getElementsByClassName("button-level");
+for (let level of levels) {
+    level.addEventListener("click", setGame);
+}
+
+function setGame(gameType) {
+    document.getElementById("difficulty-level").innerHTML = `<p>Level chosen</p>: ${gameType}`;
+    document.getElementById('high-score').innerHTML = highScore;
+    document.getElementById('score').innerHTML = score;
+
+    let guessingParameters = gameSetup.getGuessingParameters();
+    phrase = guessingParameters.phrase;
+
+    document.getElementById('category').innerHTML = `<p>Category:</p> ${guessingParameters.category}`;
+    document.getElementById("game-screen").style.display = "block";
+    document.getElementById("choose-level-screen").style.display = "none";
+}

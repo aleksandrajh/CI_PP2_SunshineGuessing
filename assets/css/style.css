@@ -38,7 +38,7 @@ body::before {
     z-index: -1;
 }
 
-h3 {
+h3, #category {
     margin-bottom: 1rem;
     text-transform: none;
     font-weight: 600;

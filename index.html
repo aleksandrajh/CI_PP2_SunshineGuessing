@@ -23,10 +23,6 @@
         <div class="top-line">         
             <i class="far fa-user-circle user-icon" id="user-icon"></i>
             <p id="username"></p>
-            
-            <button id="back">
-                <i class="far fa-arrow-alt-circle-left back-icon"></i>
-            </button>
 
             <button id="instructions-icon">
                 <i class="far fa-question-circle instruction-icon"></i>
@@ -65,7 +61,7 @@
                     <br>
                     Enjoy!
                 </p>
-                <button class="button" onclick="closeModal()">Close</button>
+                <button class="button" onclick="closeInstructions()">Close</button>
             </div>
         </div>
 
@@ -79,8 +75,8 @@
         </div>
 
         <div id="game-screen">
-            <div id="difficulty-level" class="float-start"><p>Level chosen</p></div>
-            <div id="category"><p>Category:</p></div>
+            <div id="difficulty-level"></div>
+            <div id="category"></div>
             <div>
                 <img id="sun-image" src="assets/images/sun-image-easy7.png" alt="Picture of a full sun">
             </div>
