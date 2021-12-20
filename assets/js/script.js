@@ -113,3 +113,12 @@ function showHiddenPhrase(phrase) {
     }
     return underscores;
 }
+
+function showKeyboard() {
+    let keyboard = "";
+    for (let letter of alphabet) {
+        keyboard += `<button type="button" class="btn btn-primary py-1 px-2 m-1" id="key-${letter}">${letter}</button>`;
+    }
+    document.getElementById('keyboard').innerHTML = keyboard;
+}
+showKeyboard();
