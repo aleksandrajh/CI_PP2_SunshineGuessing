@@ -83,14 +83,33 @@ for (let level of levels) {
 }
 
 function setGame(gameType) {
-    document.getElementById("difficulty-level").innerHTML = `<p>Level chosen</p>: ${gameType}`;
-    document.getElementById('high-score').innerHTML = highScore;
-    document.getElementById('score').innerHTML = score;
+    document.getElementById("difficulty-level").innerHTML = `<h3>Level chosen</h3>: ${gameType}`;
+    document.getElementById("high-score").innerHTML = highScore;
+    document.getElementById("score").innerHTML = score;
 
     let guessingParameters = gameSetup.getGuessingParameters();
     phrase = guessingParameters.phrase;
-
-    document.getElementById('category').innerHTML = `<p>Category:</p> ${guessingParameters.category}`;
+    document.getElementById("category").innerHTML = `<p>Category:</p> ${guessingParameters.category}`;
     document.getElementById("game-screen").style.display = "block";
     document.getElementById("choose-level-screen").style.display = "none";
+
+    setGuessingPhrase(phrase);
+
+}
+
+function setGuessingPhrase(phrase) {
+    let guessingPhrase = showHiddenPhrase(phrase);
+    document.getElementById("phrase").innerHTML = guessingPhrase;
+}
+
+function showHiddenPhrase(phrase) {
+    let underscores = "";
+    for (let letter of phrase) {
+        if (letter === " ") {
+            underscores += " ";
+        } else {
+            underscores += "_";
+        }
+    }
+    return underscores;
 }
