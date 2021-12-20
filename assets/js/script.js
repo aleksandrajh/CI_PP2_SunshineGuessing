@@ -128,9 +128,9 @@ function keyboardEventListeners() {
         let button = event.target;
         let letter = button.innerHTML;
 
-        if (!button.clicked) {
+        if (!button.className.includes("clicked")) {
             button.classList.remove("btn-primary");
-            button.classList.add("btn-outline-primary");
+            button.classList.add("btn-outline-primary", "clicked");
             button.disabled = true;
         }
         console.log(letter);
@@ -140,12 +140,11 @@ function keyboardEventListeners() {
         let letterPressed = event.key.toUpperCase();
         let button = document.getElementById(`key-${letterPressed}`);
 
-        if (alphabet.includes(letterPressed) && !button.clicked) {
+        if (alphabet.includes(letterPressed) && !button.className.includes("pressed")) {
             button.classList.remove("btn-primary");
-            button.classList.add("btn-outline-primary");
-            button.disabled = true;
+            button.classList.add("btn-outline-primary", "pressed");
+            console.log(letterPressed);
         }
-        console.log(letterPressed);
     });
 }
 
