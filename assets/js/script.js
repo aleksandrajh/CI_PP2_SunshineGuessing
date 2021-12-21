@@ -100,6 +100,7 @@ function setGame(gameLevel) {
 
     setGuessingPhrase(phrase);
     showKeyboard();
+    // add function to show relevant picture
 }
 
 function setGuessingPhrase(phrase) {
@@ -199,8 +200,8 @@ function showCorrectScreen() {
     document.getElementById("correct-screen").style.display = "block";
     document.getElementById("game-screen").style.display = "none";
 
-    document.getElementById("high-score").innerHTML = highScore;
-    document.getElementById("score").innerHTML = score;
+    document.getElementById("correct-high-score").innerHTML = highScore;
+    document.getElementById("correct-score").innerHTML = score;
 
     document.getElementById("next-phrase").addEventListener("click", function () {
         let gameLevel = document.getElementById("difficulty-level").innerHTML;
@@ -214,8 +215,21 @@ function showCorrectScreen() {
 }
 
 
-
 function noGuessesLeft() {
     document.getElementById("wrong-screen").style.display = "block";
     document.getElementById("game-screen").style.display = "none";
+
+    document.getElementById("wrong-score").innerHTML = score;
+    document.getElementById("wrong-high-score").innerHTML = highScore;
+
+    document.getElementById("try-again").addEventListener("click", function () {
+        score = 0;
+        let gameLevel = document.getElementById("difficulty-level").innerHTML;
+        setGame(gameLevel);
+        document.getElementById("wrong-screen").style.display = "none";
+    });
+
+    document.getElementById("restart-game").addEventListener("click", function () {
+        selectGameLevel();
+    });
 }
