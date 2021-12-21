@@ -142,7 +142,7 @@ h3, #category {
     background: linear-gradient(to right, var(--orange), var(--light-orange)) !important;
 }
 
-.user-log-error {
+.user-log-error, #correct-answer {
     font-size: 90%;
     color: var(--pink);
     padding-top: 1.2rem;
@@ -185,8 +185,8 @@ h3, #category {
 }
 
 .image-result img {
-    width: 30%;
-    padding: 4% 0;
+    width: 25%;
+    padding: 0 0 2% 0;
 }
 
 

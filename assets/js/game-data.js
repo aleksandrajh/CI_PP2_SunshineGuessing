@@ -1,6 +1,5 @@
 let gameSetup = (function () {
     let easyLevelImages = [
-        'assets/images/sun-image-easy0.png',
         'assets/images/sun-image-easy1.png',
         'assets/images/sun-image-easy2.png',
         'assets/images/sun-image-easy3.png',

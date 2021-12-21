@@ -100,8 +100,15 @@ function setGame(gameLevel) {
 
     setGuessingPhrase(phrase);
     showKeyboard();
-    // add function to show relevant picture
+    displaySunImages(gameLevel);
 }
+
+function displaySunImages(gameLevel) {
+    images = gameSetup.showImages(gameLevel);
+    document.getElementById("sun-image").src = images[images.length - 1];
+    guessesLeft = images.length;
+}
+
 
 function setGuessingPhrase(phrase) {
     let guessingPhrase = showHiddenPhrase(phrase);
@@ -164,11 +171,16 @@ function checkLetter(letter) {
         guessesLeft -= 1;
         console.log("You lost 1 guess");
         if (guessesLeft) {
-            // display relevant picture for number of guesses left
+            let nextSunImage = guessesLeft - 1;
+            displayNextSunImage(nextSunImage);
         } else {
             noGuessesLeft();
         }
     }
+}
+
+function displayNextSunImage(nextSunImage) {
+    document.getElementById("sun-image").src = images[nextSunImage];
 }
 
 function addLetters(guess) {
@@ -221,6 +233,7 @@ function noGuessesLeft() {
 
     document.getElementById("wrong-score").innerHTML = score;
     document.getElementById("wrong-high-score").innerHTML = highScore;
+    document.getElementById('correct-answer').innerHTML = phrase;
 
     document.getElementById("try-again").addEventListener("click", function () {
         score = 0;
