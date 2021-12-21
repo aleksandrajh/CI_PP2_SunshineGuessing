@@ -98,9 +98,9 @@ function setGame(gameLevel) {
     document.getElementById("game-screen").style.display = "block";
     document.getElementById("choose-level-screen").style.display = "none";
 
+    displaySunImages(gameLevel);
     setGuessingPhrase(phrase);
     showKeyboard();
-    displaySunImages(gameLevel);
 }
 
 function displaySunImages(gameLevel) {
@@ -108,7 +108,6 @@ function displaySunImages(gameLevel) {
     document.getElementById("sun-image").src = images[images.length - 1];
     guessesLeft = images.length;
 }
-
 
 function setGuessingPhrase(phrase) {
     let guessingPhrase = showHiddenPhrase(phrase);
@@ -169,18 +168,18 @@ function checkLetter(letter) {
         addLetters(letter);
     } else {
         guessesLeft -= 1;
-        console.log("You lost 1 guess");
         if (guessesLeft) {
-            let nextSunImage = guessesLeft - 1;
-            displayNextSunImage(nextSunImage);
+            let nextImageIndex = guessesLeft;
+            displayNextSunImage(nextImageIndex);
         } else {
-            noGuessesLeft();
+            displayNextSunImage(0);
+            setTimeout(noGuessesLeft, 700);
         }
     }
 }
 
-function displayNextSunImage(nextSunImage) {
-    document.getElementById("sun-image").src = images[nextSunImage];
+function displayNextSunImage(nextImageIndex) {
+    document.getElementById("sun-image").src = images[nextImageIndex];
 }
 
 function addLetters(guess) {
