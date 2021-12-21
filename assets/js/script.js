@@ -7,7 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let mainLoginScreen = document.getElementById("login-screen");
 let getInstructions = document.getElementById("instructions-icon");
+let displayGuessNumber = document.getElementById("guesses");
 let errorMessage = document.getElementById("error-message");
+
 
 
 /**
@@ -17,6 +19,7 @@ function runMainScreen() {
     errorMessage.style.display = "none";
     mainLoginScreen.style.display = "block";
     document.getElementById("user-icon").style.display = "none";
+    document.getElementById("cloud-icon").style.display = "none";
     document.getElementById("username").innerText = "";
     document.getElementById("user").focus();
 }
@@ -88,7 +91,8 @@ function selectGameLevel() {
 selectGameLevel()
 
 function setGame(gameLevel) {
-    document.getElementById("difficulty-level").innerHTML = `Level: ${gameLevel}`;
+    document.getElementById("difficulty-level").innerHTML = `${gameLevel}`;
+    document.getElementById("cloud-icon").style.display = "inline-block";
     document.getElementById("high-score").innerHTML = highScore;
     document.getElementById("score").innerHTML = score;
 
@@ -107,6 +111,7 @@ function displaySunImages(gameLevel) {
     images = gameSetup.showImages(gameLevel);
     document.getElementById("sun-image").src = images[images.length - 1];
     guessesLeft = images.length - 1;
+    displayGuessNumber.innerHTML = guessesLeft;
 }
 
 function setGuessingPhrase(phrase) {
@@ -169,10 +174,13 @@ function checkLetter(letter) {
     } else {
         guessesLeft -= 1;
         if (guessesLeft) {
+            displayGuessNumber.innerHTML = guessesLeft;
             let nextImageIndex = guessesLeft;
             displayNextSunImage(nextImageIndex);
+
         } else {
             displayNextSunImage(0);
+            displayGuessNumber.innerHTML = 0;
             setTimeout(noGuessesLeft, 700);
         }
     }
