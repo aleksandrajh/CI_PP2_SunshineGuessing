@@ -77,13 +77,18 @@ let guessesLeft = 0;
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 
-let levels = document.getElementsByClassName("button-level");
-for (let level of levels) {
-    level.addEventListener("click", setGame);
+function selectGameLevel() {
+    score = 0;
+    document.getElementById('level-buttons').addEventListener('click', function (event) {
+        let button = event.target;
+        let gameLevel = button.getAttribute('data-type');
+        setGame(gameLevel);
+    });
 }
+selectGameLevel()
 
-function setGame(gameType) {
-    document.getElementById("difficulty-level").innerHTML = `Level: ${gameType}`;
+function setGame(gameLevel) {
+    document.getElementById("difficulty-level").innerHTML = `Level: ${gameLevel}`;
     document.getElementById("high-score").innerHTML = highScore;
     document.getElementById("score").innerHTML = score;
 

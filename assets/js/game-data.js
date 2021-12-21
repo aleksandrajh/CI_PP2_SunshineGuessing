@@ -189,12 +189,12 @@ let gameSetup = (function () {
         ]
     }
 
-    function showImages(gameType) {
-        if (gameType === 'easy') {
+    function showImages(gameLevel) {
+        if (gameLevel === 'easy') {
             return easyLevelImages;
-        } else if (gameType === 'medium') {
+        } else if (gameLevel === 'medium') {
             return mediumLevelImages;
-        } else if (gameType === 'hard') {
+        } else if (gameLevel === 'hard') {
             return hardLevelImages;
         } else {
             throw new Error('Sorry, images do not exist.');
