@@ -16,7 +16,8 @@ let gameSetup = (function () {
         'assets/images/sun-image-medium2.png',
         'assets/images/sun-image-medium3.png',
         'assets/images/sun-image-medium4.png',
-        'assets/images/sun-image-medium5.png'
+        'assets/images/sun-image-medium5.png',
+
     ];
 
     let hardLevelImages = [

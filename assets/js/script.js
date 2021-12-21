@@ -15,10 +15,10 @@ let errorMessage = document.getElementById("error-message");
 */
 function runMainScreen() {
     errorMessage.style.display = "none";
+    mainLoginScreen.style.display = "block";
     document.getElementById("user-icon").style.display = "none";
     document.getElementById("username").innerText = "";
     document.getElementById("user").focus();
-    mainLoginScreen.style.display = "block";
 }
 
 /**
@@ -95,8 +95,8 @@ function setGame(gameLevel) {
     let guessingParameters = gameSetup.getGuessingParameters();
     phrase = guessingParameters.phrase;
     document.getElementById("category").innerHTML = `<p>Category:</p> ${guessingParameters.category}`;
-    document.getElementById("game-screen").style.display = "block";
     document.getElementById("choose-level-screen").style.display = "none";
+    document.getElementById("game-screen").style.display = "block";
 
     displaySunImages(gameLevel);
     setGuessingPhrase(phrase);
