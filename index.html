@@ -24,6 +24,17 @@
             <i class="far fa-user-circle user-icon" id="user-icon"></i>
             <p id="username"></p>
             <div id="difficulty-level"></div>
+<!-- 
+              <span>
+                <span class="fa-layers-text"><i class="fas fa-cloud cloud-icon" id="cloud-icon">2</i></span>
+              </span> -->
+
+              <span class="fa-stack fa-lg cloud-icon" id="cloud-icon">
+                <i class="fas fa-cloud fa-stack-2x"></i>
+                <span class="fa fa-stack-1x" id="guesses">X</span>
+              </span>
+
+
             <button id="instructions-icon">
                 <i class="far fa-question-circle instruction-icon"></i>
             </button>
@@ -78,7 +89,7 @@
             
             <div id="category"></div>
             <div>
-                <img id="sun-image" src="assets/images/sun-image-easy7.png" alt="Picture of a full sun">
+                <img id="sun-image" src="assets/images/sun-image-easy7.png" alt="Picture of the sun with cloud added on incorrect guess">
             </div>
             <div id="phrase"></div>
             <div id="keyboard"></div>

@@ -106,7 +106,7 @@ function setGame(gameLevel) {
 function displaySunImages(gameLevel) {
     images = gameSetup.showImages(gameLevel);
     document.getElementById("sun-image").src = images[images.length - 1];
-    guessesLeft = images.length;
+    guessesLeft = images.length - 1;
 }
 
 function setGuessingPhrase(phrase) {
@@ -215,20 +215,20 @@ function showCorrectScreen() {
     document.getElementById("correct-score").innerHTML = score;
 
     document.getElementById("next-phrase").addEventListener("click", function () {
-        let gameLevel = document.getElementById("difficulty-level").innerHTML;
-        setGame(gameLevel);
         document.getElementById("correct-screen").style.display = "none";
+        let sameLevel = document.getElementById("difficulty-level").innerHTML;
+        setGame(sameLevel);
     });
 
     document.getElementById("restart-game").addEventListener("click", function () {
-        selectGameLevel();
+        selectGameLevel(gameLevel);
     });
 }
 
 
 function noGuessesLeft() {
-    document.getElementById("wrong-screen").style.display = "block";
     document.getElementById("game-screen").style.display = "none";
+    document.getElementById("wrong-screen").style.display = "block";
 
     document.getElementById("wrong-score").innerHTML = score;
     document.getElementById("wrong-high-score").innerHTML = highScore;
@@ -237,7 +237,7 @@ function noGuessesLeft() {
     document.getElementById("try-again").addEventListener("click", function () {
         score = 0;
         let gameLevel = document.getElementById("difficulty-level").innerHTML;
-        setGame(gameLevel);
+        selectGameLevel(gameLevel);
         document.getElementById("wrong-screen").style.display = "none";
     });
 

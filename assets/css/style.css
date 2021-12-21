@@ -88,6 +88,30 @@ h3, #category {
     display: inline-block;
 }
 
+#cloud-icon {
+    color: var(--sky);
+    font-size: inherit;
+    font-weight: bold;
+    font-size: 130%;
+    display: inline-block;
+    vertical-align: top;
+    display:none;
+}
+
+#guesses {
+    color: var(--navy-blue);
+    font-family: 'Nunito', sans-serif;
+    font-size: 105%;
+}
+
+/* .fa-stack {
+    height: 80% !important;
+    line-height: 1em !important;;
+    position: relative !important;;
+    vertical-align: middle !important;;
+    width: 2em !important;;
+} */
+
 #instructions-icon {
     background: none !important;
 }
@@ -188,7 +212,6 @@ h3, #category {
     width: 25%;
     padding: 0 0 2% 0;
 }
-
 
 #game-screen p {
     text-transform: none;
