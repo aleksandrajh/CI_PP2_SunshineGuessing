@@ -196,6 +196,10 @@ h3, #category {
     display: inline;
 }
 
+.text-center {
+    margin-top: 3%;
+}
+
 #error-message {
     display: none;
 }

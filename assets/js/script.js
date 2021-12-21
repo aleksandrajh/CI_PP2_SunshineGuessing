@@ -165,7 +165,7 @@ function checkLetter(letter) {
         if (guessesLeft) {
             // display relevant picture for number of guesses left
         } else {
-            console.log("No guesses left");
+            noGuessesLeft();
         }
     }
 }
@@ -181,8 +181,19 @@ function addLetters(guess) {
 
 function ifPhraseIsGuessed(currentPhrase) {
     if (currentPhrase === phrase) {
-        console.log('Phrase has been guessed');
+        phraseGuessed();
     } else {
         return;
     }
+}
+
+function phraseGuessed() {
+    score += guessesLeft;
+    document.getElementById("correct-screen").style.display = "block";
+    document.getElementById("game-screen").style.display = "none";
+}
+
+function noGuessesLeft() {
+    document.getElementById("wrong-screen").style.display = "block";
+    document.getElementById("game-screen").style.display = "none";
 }
