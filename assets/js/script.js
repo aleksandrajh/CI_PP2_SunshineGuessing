@@ -189,9 +189,31 @@ function ifPhraseIsGuessed(currentPhrase) {
 
 function phraseGuessed() {
     score += guessesLeft;
+    if (score >= highScore) {
+        highScore = score;
+    }
+    showCorrectScreen();
+}
+
+function showCorrectScreen() {
     document.getElementById("correct-screen").style.display = "block";
     document.getElementById("game-screen").style.display = "none";
+
+    document.getElementById("high-score").innerHTML = highScore;
+    document.getElementById("score").innerHTML = score;
+
+    document.getElementById("next-phrase").addEventListener("click", function () {
+        let gameLevel = document.getElementById("difficulty-level").innerHTML;
+        setGame(gameLevel);
+        document.getElementById("correct-screen").style.display = "none";
+    });
+
+    document.getElementById("restart-game").addEventListener("click", function () {
+        selectGameLevel();
+    });
 }
+
+
 
 function noGuessesLeft() {
     document.getElementById("wrong-screen").style.display = "block";
