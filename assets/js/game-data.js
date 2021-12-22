@@ -228,7 +228,6 @@ let gameSetup = (function () {
     function getCategory() {
         let categories = Object.keys(phrases);
         let index = Math.floor(Math.random() * categories.length);
-        console.log(categories[index]);
         return categories[index];
     }
 
@@ -240,7 +239,6 @@ let gameSetup = (function () {
     function getPhrase(category) {
         let categoryPhrases = phrases[category];
         let index = Math.floor(Math.random() * categoryPhrases.length);
-        console.log(categoryPhrases[index]);
         return categoryPhrases[index];
     }
 
