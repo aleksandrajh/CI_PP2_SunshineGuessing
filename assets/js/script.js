@@ -226,9 +226,16 @@ function phraseGuessed() {
 function showCorrectScreen() {
     correctScreen.style.display = "block";
     gameScreen.style.display = "none";
+    document.getElementById("current-round-score").innerHTML = guessesLeft;
 
     document.getElementById("correct-high-score").innerHTML = highScore;
     document.getElementById("correct-score").innerHTML = score;
+
+    if (guessesLeft === 1) {
+        document.getElementById("plural").style.display = "none";
+    } else {
+        document.getElementById("plural").style.display = "inline";
+    }
 
     document.getElementById("next-phrase").addEventListener("click", function () {
         correctScreen.style.display = "none";

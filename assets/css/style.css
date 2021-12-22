@@ -207,11 +207,15 @@ h3 {
 }
 
 #sun-image {
-    width: 45%;
+    width: 35%;
 }
 
 .image-result img {
-    width: 25%;
+    width: 17%;
+}
+
+#current-round-score {
+    color: var(--pink);
 }
 
 #game-screen p {
@@ -222,9 +226,8 @@ h3 {
 #phrase {
     letter-spacing: 0.4rem;
     font-weight: bold;
-    padding-bottom: 2%;
-    font-size: 1.5rem;
-    padding: 0 1rem;
+    padding: 2%;
+    font-size: 1.2rem;
 }
 
 .scoring-display {
