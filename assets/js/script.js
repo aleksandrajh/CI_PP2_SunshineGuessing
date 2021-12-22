@@ -227,12 +227,7 @@ function showCorrectScreen() {
         let sameLevel = document.getElementById("difficulty-level").innerHTML;
         setGame(sameLevel);
     });
-
-    document.getElementById("restart-game").addEventListener("click", function () {
-        selectGameLevel(gameLevel);
-    });
 }
-
 
 function noGuessesLeft() {
     document.getElementById("game-screen").style.display = "none";
@@ -244,12 +239,16 @@ function noGuessesLeft() {
 
     document.getElementById("try-again").addEventListener("click", function () {
         score = 0;
-        let gameLevel = document.getElementById("difficulty-level").innerHTML;
-        selectGameLevel(gameLevel);
         document.getElementById("wrong-screen").style.display = "none";
+        let sameLevel = document.getElementById("difficulty-level").innerHTML;
+        setGame(sameLevel);
     });
 
     document.getElementById("restart-game").addEventListener("click", function () {
-        selectGameLevel();
+        score = 0;
+        document.getElementById("wrong-screen").style.display = "none";
+        document.getElementById("choose-level-screen").style.display = "block";
     });
+
+
 }
