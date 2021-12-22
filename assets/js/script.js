@@ -1,10 +1,13 @@
 /**
- * Adds an event listener to the document and runs the main screen when the event fires
+ * Add an event listener to the document and runs the main screen with user log-in
  */
 document.addEventListener('DOMContentLoaded', function () {
     runMainScreen();
 });
 
+/**
+ * Set up of game variables to vary display/hide
+ */
 let mainLoginScreen = document.getElementById("login-screen");
 let getInstructions = document.getElementById("instructions-icon");
 let displayGuessNumber = document.getElementById("guesses");
@@ -14,10 +17,8 @@ let gameScreen = document.getElementById("game-screen");
 let correctScreen = document.getElementById("correct-screen");
 let wrongScreen = document.getElementById("wrong-screen");
 
-
-
 /**
-* Show the main screen with user log-in and start game
+* Show the main screen with user log-in and instruction icon
 */
 function runMainScreen() {
     errorMessage.style.display = "none";
@@ -50,7 +51,7 @@ function closeInstructions() {
 }
 
 /**
- * Verification of the user name input on the login screen
+ * Verification of the user name input on the log-in screen
  */
 document.getElementById("user-log").addEventListener("click", checkUsername);
 
@@ -71,7 +72,7 @@ function checkUsername() {
 checkUsername();
 
 /**
- * Input of username using the enter key
+ * Input of username using by pressing enter key
  */
 document.getElementById("user").addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
@@ -79,15 +80,20 @@ document.getElementById("user").addEventListener("keydown", function (event) {
     }
 });
 
-// Game's data
+/**
+ * Data displayed on the game screen
+ */
 let images;
 let phrase = "";
 let highScore = 0;
 let score = 0;
 let guessesLeft = 0;
+// Create a keyboard on game screen and verify whether the phrase contains one of the below letters
 let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-
+/**
+ * Display a screen with game levels and based on user's selection display relevant game settings
+ */
 function selectGameLevel() {
     score = 0;
     document.getElementById('level-buttons').addEventListener('click', function (event) {
@@ -98,6 +104,13 @@ function selectGameLevel() {
 }
 selectGameLevel()
 
+/**
+ * Set the game screen based on level selected.
+ * Display selected game level, number of guesses left, high score and score.
+ * Set up category and a phrase to be guessed.
+ * Populate underscores for hidden phrase and keyboard buttons.
+ * @param {string} gameLevel 
+ */
 function setGame(gameLevel) {
     document.getElementById("difficulty-level").innerHTML = `${gameLevel}`;
     document.getElementById("cloud-icon").style.display = "inline-block";
@@ -115,6 +128,13 @@ function setGame(gameLevel) {
     showKeyboard();
 }
 
+/**
+ * Display the game image from game-data file based on selected game level.
+ * First displayed image is the last within the image array
+ * Guesses in each round are based on the length of image array, varied for different game level.
+ * 
+ * @param {string} gameLevel 
+ */
 function displaySunImages(gameLevel) {
     images = gameSetup.showImages(gameLevel);
     document.getElementById("sun-image").src = images[images.length - 1];
@@ -122,23 +142,34 @@ function displaySunImages(gameLevel) {
     displayGuessNumber.innerHTML = guessesLeft;
 }
 
+/**
+ * Display underscores for hidden phrase
+ * @param {string} phrase 
+ */
 function setGuessingPhrase(phrase) {
     let guessingPhrase = showHiddenPhrase(phrase);
     document.getElementById("phrase").innerHTML = guessingPhrase;
 }
-
+/**
+ * Set up underscores for every letter within the hidden phrase leaving blank spaces between words.
+ * @param {string} phrase 
+ * @returns {string} undescores
+ */
 function showHiddenPhrase(phrase) {
     let underscores = "";
     for (let letter of phrase) {
-        if (letter === " ") {
-            underscores += " ";
-        } else {
+        if (letter !== " ") {
             underscores += "_";
+        } else {
+            underscores += " ";
         }
     }
     return underscores;
 }
 
+/**
+ * Populate keyboard buttons in the game screen
+ */
 function showKeyboard() {
     let keyboard = "";
     for (let letter of alphabet) {
@@ -147,6 +178,11 @@ function showKeyboard() {
     document.getElementById("keyboard").innerHTML = keyboard;
     keyboardEventListeners();
 }
+
+/**
+ * Add event listeners to populated keyboard button to enable letter guessing with use of mouse and keyboard
+ * Call checkLetter function to verify if the phrase contains guessed letter
+ */
 
 function keyboardEventListeners() {
     document.getElementById("keyboard").addEventListener('click', function (event) {
