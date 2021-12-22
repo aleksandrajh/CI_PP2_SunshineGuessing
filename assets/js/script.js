@@ -245,13 +245,13 @@ function displayNextSunImage(nextImageIndex) {
 /**
  * Replace the underscores with the guessed letter.
  * Call ifPhraseIsGuessed function.
- * @param {string} guess 
+ * @param {string} guessedLetter
  */
-function addLetter(guess) {
+function addLetter(guessedLetter) {
     let phraseToGuess = document.getElementById("phrase").innerHTML;
-    let newPhrase = phraseToGuess.split("")
-        .map((x, index) => guess.toLowerCase() === phrase[index].toLowerCase() ? phrase[index] : x)
-        .join("");
+    let newPhrase = phraseToGuess.split("") //logs array of '_' for every hidden letter and ' ' for blank space
+        .map((val, index) => guessedLetter.toLowerCase() === phrase[index].toLowerCase() ? phrase[index] : val) //return the guessed letter in the correct phrase index, if within the phrase
+        .join(""); //without the join method, the letters displayed would be separated by commas
     ifPhraseIsGuessed(newPhrase);
     document.getElementById("phrase").innerHTML = newPhrase;
 }
