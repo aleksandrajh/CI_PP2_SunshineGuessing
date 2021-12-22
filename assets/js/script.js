@@ -24,6 +24,8 @@ function runMainScreen() {
     mainLoginScreen.style.display = "block";
     chooseLevelScreen.style.display = "none";
     gameScreen.style.display = "none";
+    correctScreen.style.display = "none";
+    wrongScreen.style.display = "none";
     document.getElementById("user-icon").style.display = "none";
     document.getElementById("cloud-icon").style.display = "none";
     document.getElementById("username").innerText = "";

@@ -38,9 +38,13 @@ body::before {
     z-index: -1;
 }
 
-h3, #category {
-    margin-bottom: 1rem;
+h3 {
+    margin: 2rem 0;
     font-weight: 600;
+}
+
+#category {
+    margin-bottom: 0.5rem;
 }
 
 #game-container {
@@ -215,6 +219,14 @@ h3, #category {
     display: inline;
 }
 
+#phrase {
+    letter-spacing: 0.4rem;
+    font-weight: bold;
+    padding-bottom: 2%;
+    font-size: 1.5rem;
+    padding: 0 1rem;
+}
+
 .scoring-display {
     margin-top: 3%;
 }
@@ -222,20 +234,4 @@ h3, #category {
 #next-phrase, #try-again, #restart-game {
     width: 50%;
     margin-top: 1rem;
-}
-
-#choose-level-screen {
-    display: none;
-}
-
-#game-screen {
-    display: none;
-}
-
-#correct-screen {
-    display: none;
-}
-
-#wrong-screen {
-    display: none;
 }
