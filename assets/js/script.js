@@ -181,28 +181,24 @@ function showKeyboard() {
 
 /**
  * Add event listeners to populated keyboard button to enable letter guessing with use of mouse and keyboard
- * Call checkLetter function to verify if the phrase contains guessed letter
+ * Call checkLetter function to verify if the hidden phrase contains guessed letter
  */
-
 function keyboardEventListeners() {
     document.getElementById("keyboard").addEventListener('click', function (event) {
         if (!event.target.className.includes("btn")) return;
         let button = event.target;
         let letter = button.innerHTML;
-
         if (!button.className.includes("clicked")) {
             button.classList.remove("btn-primary");
             button.classList.add("btn-outline-primary", "clicked");
             button.disabled = true;
             checkLetter(letter);
         }
-
     })
 
     document.addEventListener("keydown", function logKey(event) {
         let letterPressed = event.key.toUpperCase();
         let button = document.getElementById(`key-${letterPressed}`);
-
         if (alphabet.includes(letterPressed) && !button.className.includes("pressed")) {
             button.classList.remove("btn-primary");
             button.classList.add("btn-outline-primary", "pressed");
@@ -211,10 +207,18 @@ function keyboardEventListeners() {
     });
 }
 
-
+/**
+ * Verify if the hidden phrase contains guessed letter.
+ * The addLetter funtion is called if the letter is found wihin the phrase. The number of remaining guesses and image is not changed.
+ * If the letter is not found, the number of guesses is reduced by 1.
+ * If there are guesses left within the round, the number is displayed in the top line icon and the displayNextSunImage function is called.
+ * If all guesses were used then the last image in the array (index 0) is displayed and noGuessesLeft function called with a delay.
+ * 
+ * @param {string} letter 
+ */
 function checkLetter(letter) {
     if (phrase.includes(letter.toLowerCase()) || phrase.includes(letter)) {
-        addLetters(letter);
+        addLetter(letter);
     } else {
         guessesLeft -= 1;
         if (guessesLeft) {
@@ -230,11 +234,20 @@ function checkLetter(letter) {
     }
 }
 
+/**
+ * Display the sun image from the image array with the index of remaining guesses
+ * @param {number} nextImageIndex 
+ */
 function displayNextSunImage(nextImageIndex) {
     document.getElementById("sun-image").src = images[nextImageIndex];
 }
 
-function addLetters(guess) {
+/**
+ * Replace the underscores with the guessed letter.
+ * Call ifPhraseIsGuessed function.
+ * @param {string} guess 
+ */
+function addLetter(guess) {
     let phraseToGuess = document.getElementById("phrase").innerHTML;
     let newPhrase = phraseToGuess.split("")
         .map((x, index) => guess.toLowerCase() === phrase[index].toLowerCase() ? phrase[index] : x)
@@ -243,6 +256,10 @@ function addLetters(guess) {
     document.getElementById("phrase").innerHTML = newPhrase;
 }
 
+/**
+ * If all letters have been guessed from the phrase, the phraseGuessed function is called. Else, return.
+ * @param {string} currentPhrase 
+ */
 function ifPhraseIsGuessed(currentPhrase) {
     if (currentPhrase === phrase) {
         phraseGuessed();
@@ -250,6 +267,12 @@ function ifPhraseIsGuessed(currentPhrase) {
         return;
     }
 }
+
+/**
+ * If the phrase has been guessed, the score is updated with the number of remaining guesses in the round.
+ * High score is updated if the score is higher than high score.
+ * The showCorrectScreen function is called.
+ */
 
 function phraseGuessed() {
     score += guessesLeft;
@@ -259,6 +282,11 @@ function phraseGuessed() {
     showCorrectScreen();
 }
 
+/**
+ * Display screen when the phrase has been guessed.
+ * Show score for the current round, highscore and total user score for the game.
+ * Display button to continue the game when clicked.
+ */
 function showCorrectScreen() {
     correctScreen.style.display = "block";
     gameScreen.style.display = "none";
@@ -267,6 +295,7 @@ function showCorrectScreen() {
     document.getElementById("correct-high-score").innerHTML = highScore;
     document.getElementById("correct-score").innerHTML = score;
 
+    //If number of remaining guesses is above 1 display the current round score with 'S' at the end of the word 'point'.
     if (guessesLeft === 1) {
         document.getElementById("plural").style.display = "none";
     } else {
@@ -280,6 +309,11 @@ function showCorrectScreen() {
     });
 }
 
+/**
+ * Display screen when the game is over and the are no more guesses remaining.
+ * Show the phrase which has not been guessed, score and highscore.
+ * Display two buttons with EventListener for user to try again with same game level or restart the game and select other game level.
+ */
 function noGuessesLeft() {
     gameScreen.style.display = "none";
     wrongScreen.style.display = "block";
