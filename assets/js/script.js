@@ -9,6 +9,10 @@ let mainLoginScreen = document.getElementById("login-screen");
 let getInstructions = document.getElementById("instructions-icon");
 let displayGuessNumber = document.getElementById("guesses");
 let errorMessage = document.getElementById("error-message");
+let chooseLevelScreen = document.getElementById("choose-level-screen");
+let gameScreen = document.getElementById("game-screen");
+let correctScreen = document.getElementById("correct-screen");
+let wrongScreen = document.getElementById("wrong-screen");
 
 
 
@@ -18,6 +22,8 @@ let errorMessage = document.getElementById("error-message");
 function runMainScreen() {
     errorMessage.style.display = "none";
     mainLoginScreen.style.display = "block";
+    chooseLevelScreen.style.display = "none";
+    gameScreen.style.display = "none";
     document.getElementById("user-icon").style.display = "none";
     document.getElementById("cloud-icon").style.display = "none";
     document.getElementById("username").innerText = "";
@@ -50,7 +56,7 @@ function checkUsername() {
     let username = document.getElementById("user").value.trim()
 
     if (username.length >= 1 && username.length <= 12) {
-        document.getElementById("choose-level-screen").style.display = "block";
+        chooseLevelScreen.style.display = "block";
         mainLoginScreen.style.display = "none";
         document.getElementById("user-icon").style.display = "block";
         document.getElementById("username").innerText = username;
@@ -99,8 +105,8 @@ function setGame(gameLevel) {
     let guessingParameters = gameSetup.getGuessingParameters();
     phrase = guessingParameters.phrase;
     document.getElementById("category").innerHTML = `<p>Category:</p> ${guessingParameters.category}`;
-    document.getElementById("choose-level-screen").style.display = "none";
-    document.getElementById("game-screen").style.display = "block";
+    chooseLevelScreen.style.display = "none";
+    gameScreen.style.display = "block";
 
     displaySunImages(gameLevel);
     setGuessingPhrase(phrase);
@@ -216,22 +222,22 @@ function phraseGuessed() {
 }
 
 function showCorrectScreen() {
-    document.getElementById("correct-screen").style.display = "block";
-    document.getElementById("game-screen").style.display = "none";
+    correctScreen.style.display = "block";
+    gameScreen.style.display = "none";
 
     document.getElementById("correct-high-score").innerHTML = highScore;
     document.getElementById("correct-score").innerHTML = score;
 
     document.getElementById("next-phrase").addEventListener("click", function () {
-        document.getElementById("correct-screen").style.display = "none";
+        correctScreen.style.display = "none";
         let sameLevel = document.getElementById("difficulty-level").innerHTML;
         setGame(sameLevel);
     });
 }
 
 function noGuessesLeft() {
-    document.getElementById("game-screen").style.display = "none";
-    document.getElementById("wrong-screen").style.display = "block";
+    gameScreen.style.display = "none";
+    wrongScreen.style.display = "block";
 
     document.getElementById("wrong-score").innerHTML = score;
     document.getElementById("wrong-high-score").innerHTML = highScore;
@@ -239,15 +245,15 @@ function noGuessesLeft() {
 
     document.getElementById("try-again").addEventListener("click", function () {
         score = 0;
-        document.getElementById("wrong-screen").style.display = "none";
+        wrongScreen.style.display = "none";
         let sameLevel = document.getElementById("difficulty-level").innerHTML;
         setGame(sameLevel);
     });
 
     document.getElementById("restart-game").addEventListener("click", function () {
         score = 0;
-        document.getElementById("wrong-screen").style.display = "none";
-        document.getElementById("choose-level-screen").style.display = "block";
+        wrongScreen.style.display = "none";
+        chooseLevelScreen.style.display = "block";
     });
 
 
