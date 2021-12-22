@@ -30,7 +30,7 @@ function runMainScreen() {
     document.getElementById("user-icon").style.display = "none";
     document.getElementById("cloud-icon").style.display = "none";
     document.getElementById("username").innerText = "";
-    document.getElementById("user").focus();
+    document.getElementById("user").focus(); //focus on input element with cursor ready for username input
 }
 
 /**
@@ -41,7 +41,7 @@ getInstructions.addEventListener("click", showInstructions);
 function showInstructions() {
     let modal = document.getElementById("myModal");
     modal.classList.add("show-modal");
-    document.body.classList.add('greyout-background');
+    document.body.classList.add('greyout-background'); //grey out the background picture when modal pops-up.
 };
 
 function closeInstructions() {
@@ -150,6 +150,7 @@ function setGuessingPhrase(phrase) {
     let guessingPhrase = showHiddenPhrase(phrase);
     document.getElementById("phrase").innerHTML = guessingPhrase;
 }
+
 /**
  * Set up underscores for every letter within the hidden phrase leaving blank spaces between words.
  * @param {string} phrase 
@@ -225,7 +226,6 @@ function checkLetter(letter) {
             displayGuessNumber.innerHTML = guessesLeft;
             let nextImageIndex = guessesLeft;
             displayNextSunImage(nextImageIndex);
-
         } else {
             displayNextSunImage(0);
             displayGuessNumber.innerHTML = 0;
@@ -273,7 +273,6 @@ function ifPhraseIsGuessed(currentPhrase) {
  * High score is updated if the score is higher than high score.
  * The showCorrectScreen function is called.
  */
-
 function phraseGuessed() {
     score += guessesLeft;
     if (score >= highScore) {
@@ -291,15 +290,14 @@ function showCorrectScreen() {
     correctScreen.style.display = "block";
     gameScreen.style.display = "none";
     document.getElementById("current-round-score").innerHTML = guessesLeft;
-
     document.getElementById("correct-high-score").innerHTML = highScore;
     document.getElementById("correct-score").innerHTML = score;
 
-    //If number of remaining guesses is above 1 display the current round score with 'S' at the end of the word 'point'.
-    if (guessesLeft === 1) {
-        document.getElementById("plural").style.display = "none";
-    } else {
+    //If number of remaining guesses is more than 1 display the current round score with 'S' at the end of the word 'point'.
+    if (guessesLeft > 1) {
         document.getElementById("plural").style.display = "inline";
+    } else {
+        document.getElementById("plural").style.display = "none";
     }
 
     document.getElementById("next-phrase").addEventListener("click", function () {
@@ -317,7 +315,6 @@ function showCorrectScreen() {
 function noGuessesLeft() {
     gameScreen.style.display = "none";
     wrongScreen.style.display = "block";
-
     document.getElementById("wrong-score").innerHTML = score;
     document.getElementById("wrong-high-score").innerHTML = highScore;
     document.getElementById('correct-answer').innerHTML = phrase;
@@ -334,6 +331,4 @@ function noGuessesLeft() {
         wrongScreen.style.display = "none";
         chooseLevelScreen.style.display = "block";
     });
-
-
 }
