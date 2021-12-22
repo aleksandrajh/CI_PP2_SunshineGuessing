@@ -1,3 +1,7 @@
+/**
+* The game-data.js file contains the images to display for different game level selected by the user,
+* phrases to be guessed and functions to select random phrase from various categories.
+*/
 let gameSetup = (function () {
     let easyLevelImages = [
         'assets/images/sun-image-easy0.png',
@@ -190,19 +194,27 @@ let gameSetup = (function () {
         ]
     }
 
+    /**
+     * Displays the relevant image depending on the level of game selected by the user
+     * @param {string} gameLevel 
+     * @returns images array
+     */
     function showImages(gameLevel) {
-        if (gameLevel === 'easy') {
+        if (gameLevel === "easy") {
             return easyLevelImages;
-        } else if (gameLevel === 'medium') {
+        } else if (gameLevel === "medium") {
             return mediumLevelImages;
-        } else if (gameLevel === 'hard') {
+        } else if (gameLevel === "hard") {
             return hardLevelImages;
         } else {
-            throw new Error('Sorry, images do not exist.');
+            throw new Error("Sorry, images do not exist.");
         }
     }
 
-
+    /**
+     * Select a category and a phrase to guess and return them in an object
+     * @returns {category, phrase}
+     */
     function getGuessingParameters() {
         let category = getCategory();
         let phrase = getPhrase(category);
@@ -211,21 +223,25 @@ let gameSetup = (function () {
 
     /**
      * Randomly select a category for the game
+     * @returns {string} selected category
      */
     function getCategory() {
         let categories = Object.keys(phrases);
-        let num = Math.floor(Math.random() * categories.length);
-        return categories[num];
+        let index = Math.floor(Math.random() * categories.length);
+        console.log(categories[index]);
+        return categories[index];
     }
 
     /**
      * Randomly select a guessing phrase for the game
+     * @param {string} category 
+     * @returns {string} phrase
      */
-
     function getPhrase(category) {
         let categoryPhrases = phrases[category];
-        let num = Math.floor(Math.random() * categoryPhrases.length);
-        return categoryPhrases[num];
+        let index = Math.floor(Math.random() * categoryPhrases.length);
+        console.log(categoryPhrases[index]);
+        return categoryPhrases[index];
     }
 
     return {
