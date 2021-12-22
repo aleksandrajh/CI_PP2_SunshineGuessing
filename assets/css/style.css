@@ -234,6 +234,10 @@ h3 {
     margin-top: 3%;
 }
 
+#plural {
+    font-size: inherit;
+}
+
 #next-phrase, #try-again, #restart-game {
     width: 50%;
     margin-top: 1rem;
