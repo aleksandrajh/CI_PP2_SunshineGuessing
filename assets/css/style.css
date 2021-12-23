@@ -49,6 +49,10 @@ h3 {
     font-weight: 600;
 }
 
+.greyout-background {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 /* Style of main game container */
 #game-container {
     position: absolute;
@@ -77,6 +81,7 @@ h3 {
     float: left;
 }
 
+/* username display */
 .top-line p {
     float: left;
 }
@@ -160,10 +165,36 @@ label {
     padding-top: 1.2rem;
 }
 
-#category {
-    margin-bottom: 0.5rem;
+/* Modal with game instructions */
+#modal-header {
+    font-weight: bold;
+    font-family: 'Rammetto One', cursive;
 }
 
+.show-modal {
+    color: var(--pink);
+    width: 100%;
+    height: 30rem;
+    max-height: 30rem;
+    max-width: 40rem;
+    align-items: center;
+    display: block;
+    z-index: 2;
+}
+
+.modal-content {
+    box-shadow: 1px 1px 20px var(--loblolly);
+    padding: 4%;
+    display: block !important;
+}
+
+/* Buttons to select game level */
+.button-level {
+    width: 60%;
+}
+
+/* Game screen */
+/* Display of username, selected game level and remaining guesses in top line */
 #username, #difficulty-level {
     font-size: 100%;
     font-weight: bold;
@@ -173,6 +204,71 @@ label {
     display: inline-block;
 }
 
+#difficulty-level {
+    text-align: center;
+    display: inline;
+}
+
+#cloud-icon {
+    color: var(--sky);
+    font-size: inherit;
+    font-weight: bold;
+    font-size: 130%;
+    display: inline-block;
+    vertical-align: top;
+    display:none;
+}
+
+#guesses {
+    color: var(--navy-blue);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+}
+
+#category {
+    margin-bottom: 0.5rem;
+}
+
+#sun-image {
+    width: 35%;
+}
+
+#phrase {
+    letter-spacing: 0.4rem;
+    font-weight: bold;
+    padding: 2%;
+    font-size: 1.2rem;
+}
+
+#game-screen p {
+    font-weight: 400;
+    display: inline;
+}
+
+/* Styling of screens */
+.image-result img {
+    width: 17%;
+}
+
+#current-round-score {
+    color: var(--pink);
+}
+
+/* Change style of span with letter 's' for score over 1 point */
+#plural {
+    font-size: inherit;
+}
+
+.scoring-display {
+    margin-top: 3%;
+}
+
+#next-phrase, #try-again, #restart-game {
+    width: 50%;
+    margin-top: 1rem;
+}
+
+/* Style of site footer */
 footer {
     position: absolute;
     width: 80%;
@@ -197,98 +293,4 @@ footer a {
 
 footer a:hover {
     color: var(--pink);
-}
-
-#difficulty-level {
-    text-align: center;
-    display: inline;
-}
-
-#cloud-icon {
-    color: var(--sky);
-    font-size: inherit;
-    font-weight: bold;
-    font-size: 130%;
-    display: inline-block;
-    vertical-align: top;
-    display:none;
-}
-
-#guesses {
-    color: var(--navy-blue);
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.2rem;
-}
-
-
-
-
-
-/* Modal with game instructions */
-
-.show-modal {
-    color: var(--pink);
-    width: 100%;
-    height: 30rem;
-    max-height: 30rem;
-    max-width: 40rem;
-    align-items: center;
-    display: block;
-    z-index: 2;
-}
-
-.modal-content {
-    box-shadow: 1px 1px 20px var(--loblolly);
-    padding: 4%;
-    display: block !important;
-}
-
-.greyout-background {
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-#modal-header {
-    font-weight: bold;
-    font-family: 'Rammetto One', cursive;
-}
-
-.button-level {
-    width: 60%;
-}
-
-#sun-image {
-    width: 35%;
-}
-
-.image-result img {
-    width: 17%;
-}
-
-#current-round-score {
-    color: var(--pink);
-}
-
-#game-screen p {
-    font-weight: 400;
-    display: inline;
-}
-
-#phrase {
-    letter-spacing: 0.4rem;
-    font-weight: bold;
-    padding: 2%;
-    font-size: 1.2rem;
-}
-
-.scoring-display {
-    margin-top: 3%;
-}
-
-#plural {
-    font-size: inherit;
-}
-
-#next-phrase, #try-again, #restart-game {
-    width: 50%;
-    margin-top: 1rem;
 }
