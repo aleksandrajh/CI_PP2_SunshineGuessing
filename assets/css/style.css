@@ -276,11 +276,11 @@ footer {
     top: 95%;
     left: 50%;
     transform: translate(-50%, -45%);
-    height: 5%;
+
 }
 
 footer p {
-    padding-top: 2.5%;
+    padding-top: 5%;
     margin-bottom: 0;
     font-size: 90%;
 }
@@ -293,4 +293,33 @@ footer a {
 
 footer a:hover {
     color: var(--pink);
+}
+
+
+/* Media querry adjustments for different screen sizes */
+
+@media all and (max-width: 390px) {
+    #game-container {
+        top: 40%;
+    }
+
+    .button {
+        width: 50%;
+    }
+
+    footer {
+        top: 90%;
+        padding-top: 0;
+        text-align: center;
+        width: 60%;
+    }
+
+    footer p {
+        padding-top: 15%;
+    }
+
+    .float-end {
+        float: none !important;
+        clear: left;
+    }  
 }
