@@ -17,7 +17,7 @@
     margin: 0;
     padding: 0;
     border: none;
-    font-size: 105%;
+    font-size: 100%;
 }
 
 body {
@@ -54,16 +54,41 @@ h3 {
     width: 80%;
     height: 30rem;
     max-height: 30rem;
-    max-width: 40rem;
+    max-width: 50rem;
     box-sizing: border-box;
-    top: 50%;
+    top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -45%);
     padding: 1%;
 }
 
+footer {
+    position: absolute;
+    width: 80%;
+    max-width: 50rem;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    height: 5%;
+}
+
+footer p {
+    padding-top: 2.5%;
+    margin-bottom: 0;
+    font-size: 90%;
+}
+
+footer a {
+    font-size: 1.6rem;
+    padding-right: 0.5rem;
+    }
+
+footer a:hover {
+    color: var(--pink);
+}
+
 .top-line {
-    line-height:3rem;
+    line-height:2.5rem;
     text-align: right;
 }
 
@@ -152,7 +177,6 @@ h3 {
     border: 1px solid var(--loblolly);
     padding: 0.7rem;
 }
-
 
 .button {
     background: linear-gradient(to right, var(--light-orange), var(--orange)) !important;
