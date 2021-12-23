@@ -79,6 +79,7 @@ footer p {
 footer a {
     font-size: 1.6rem;
     padding-right: 0.5rem;
+    color: var(--navy-blue);
     }
 
 footer a:hover {
@@ -174,6 +175,7 @@ input {
     box-shadow: 1px 1px 10px var(--loblolly);
     border: 1px solid var(--loblolly);
     padding: 0.7rem;
+    font-weight: bold;
 }
 
 input:focus {
