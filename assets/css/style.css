@@ -1,7 +1,8 @@
+/* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
 
-
+/* Colors pallet */
 :root {
     --pink: #CF2857;
     --navy-blue: #1B212B;
@@ -11,6 +12,12 @@
     --orange: #F8B500;
 }
 
+/* Highlighting of text */
+::selection {
+    background-color: var(--light-orange);
+  }
+
+  /* Remove default values */
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +30,7 @@ body {
     font-weight: 600;
 }
 
+/* Set up transparency of background image */
 body::before {
     position: absolute;
     content: "";
@@ -41,10 +49,7 @@ h3 {
     font-weight: 600;
 }
 
-#category {
-    margin-bottom: 0.5rem;
-}
-
+/* Style of main game container */
 #game-container {
     position: absolute;
     text-align: center;
@@ -60,89 +65,35 @@ h3 {
     padding: 1%;
 }
 
-footer {
-    position: absolute;
-    width: 80%;
-    max-width: 50rem;
-    top: 95%;
-    left: 50%;
-    transform: translate(-50%, -45%);
-    height: 5%;
-}
-
-footer p {
-    padding-top: 2.5%;
-    margin-bottom: 0;
-    font-size: 90%;
-}
-
-footer a {
-    font-size: 1.6rem;
-    padding-right: 0.5rem;
-    color: var(--navy-blue);
-    }
-
-footer a:hover {
-    color: var(--pink);
-}
-
+/* Style top line of the game container, icons and text inside it */
 .top-line {
     line-height:2.5rem;
     text-align: right;
+    padding-bottom: 0.5rem;
+}
+
+.user-icon {
+    font-size:250%; 
+    float: left;
 }
 
 .top-line p {
     float: left;
 }
 
-.user-icon {
-    font-size:250%; 
-    float:left;
-}
-
-.instruction-icon {
-    font-size: 250%;
-}
-
-#username, #difficulty-level {
-    font-size: 100%;
-    font-weight: bold;
-    text-transform: none;
-    margin-left: 2%;
-    margin-bottom: 0;
-    display: inline-block;
-}
-
-#difficulty-level {
-    text-align: center;
-    display: inline;
-}
-
-#cloud-icon {
-    color: var(--sky);
-    font-size: inherit;
-    font-weight: bold;
-    font-size: 130%;
-    display: inline-block;
-    vertical-align: top;
-    display:none;
-}
-
-#guesses {
-    color: var(--navy-blue);
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.2rem;
-}
-
+/* Style instructions icon and remove default background color */
 #instructions-icon {
     background: none !important;
+    font-size: 250%;
+    float: right;
 }
 
 #login-screen, #phrase, .result-text {
     text-transform: uppercase;
 }
 
-#game-title{
+/* Color gradient to game title */
+#game-title {
     background: #FCEABB;
     background: -webkit-repeating-linear-gradient(to right, #FCEABB 24%, #FCCD4D 13%, #F8B500 41%, #FBDF93 71%);
     background: -moz-repeating-linear-gradient(to right, #FCEABB 24%, #FCCD4D 13%, #F8B500 41%, #FBDF93 71%);
@@ -178,6 +129,7 @@ input {
     font-weight: bold;
 }
 
+/* Override default dark outline color */
 input:focus {
     outline: none !important;
     border-color: var(--sky);
@@ -201,11 +153,76 @@ label {
     background: linear-gradient(to right, var(--orange), var(--light-orange)) !important;
 }
 
+/* Style for message when no user input & correct answer when not guessed */
 .user-log-error, #correct-answer {
     font-size: 90%;
     color: var(--pink);
     padding-top: 1.2rem;
 }
+
+#category {
+    margin-bottom: 0.5rem;
+}
+
+#username, #difficulty-level {
+    font-size: 100%;
+    font-weight: bold;
+    text-transform: none;
+    margin-left: 2%;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+footer {
+    position: absolute;
+    width: 80%;
+    max-width: 50rem;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+    height: 5%;
+}
+
+footer p {
+    padding-top: 2.5%;
+    margin-bottom: 0;
+    font-size: 90%;
+}
+
+footer a {
+    font-size: 1.6rem;
+    padding-right: 0.5rem;
+    color: var(--navy-blue);
+    }
+
+footer a:hover {
+    color: var(--pink);
+}
+
+#difficulty-level {
+    text-align: center;
+    display: inline;
+}
+
+#cloud-icon {
+    color: var(--sky);
+    font-size: inherit;
+    font-weight: bold;
+    font-size: 130%;
+    display: inline-block;
+    vertical-align: top;
+    display:none;
+}
+
+#guesses {
+    color: var(--navy-blue);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+}
+
+
+
+
 
 /* Modal with game instructions */
 
