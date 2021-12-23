@@ -97,6 +97,7 @@ let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 function selectGameLevel() {
     score = 0;
     document.getElementById('level-buttons').addEventListener('click', function (event) {
+        if (!event.target.className.includes("button-level")) return; // prevent click over all div with three buttons
         let button = event.target;
         let gameLevel = button.getAttribute('data-type');
         setGame(gameLevel);
