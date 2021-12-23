@@ -5,8 +5,6 @@
 :root {
     --pink: #CF2857;
     --navy-blue: #1B212B;
-    --ming:#395F7A;
-    --hoki: #6883A7;
     --sky: #7bb4e0;
     --loblolly: #b0d3e8;
     --light-orange: #FCCD4D;
@@ -164,18 +162,27 @@ footer a:hover {
   100% {
       opacity: 1;
   }
-  }
+}
 
-.user-input input,
-.user-input label {
+input, label {
     font-size: 100%;
     margin-bottom: 1rem;
     border-radius: 0.7rem;
 }
-.user-input input {
+
+input {
     box-shadow: 1px 1px 10px var(--loblolly);
     border: 1px solid var(--loblolly);
     padding: 0.7rem;
+}
+
+input:focus {
+    outline: none !important;
+    border-color: var(--sky);
+}
+
+label {
+    margin-top: 0.5rem;
 }
 
 .button {
