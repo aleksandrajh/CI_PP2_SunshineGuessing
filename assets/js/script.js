@@ -1,5 +1,5 @@
 /**
- * Add an event listener to the document and runs the main screen with user log-in
+ * Add an event listener to the document and run the main screen with user log-in
  */
 document.addEventListener('DOMContentLoaded', function () {
     runMainScreen();
@@ -247,10 +247,11 @@ function displayNextSunImage(nextImageIndex) {
  * Call ifPhraseIsGuessed function.
  * @param {string} guessedLetter
  */
+
 function addLetter(guessedLetter) {
     let phraseToGuess = document.getElementById("phrase").innerHTML;
     let newPhrase = phraseToGuess.split("") //logs array of '_' for every hidden letter and ' ' for blank space
-        .map((val, index) => guessedLetter.toLowerCase() === phrase[index].toLowerCase() ? phrase[index] : val) //return the guessed letter in the correct phrase index, if within the phrase
+        .map((val, index) => guessedLetter.toLowerCase() === phrase[index].toLowerCase() ? phrase[index] : val) //return the guessed letter in the correct phrase index, if within the phrase. Val is a string param. Index is a number param.
         .join(""); //without the join method, the letters displayed would be separated by commas
     ifPhraseIsGuessed(newPhrase);
     document.getElementById("phrase").innerHTML = newPhrase;
