@@ -132,6 +132,7 @@ input {
     border: 1px solid var(--loblolly);
     padding: 0.7rem;
     font-weight: bold;
+    width: 35%;
 }
 
 /* Override default dark outline color */
@@ -347,6 +348,14 @@ footer a:hover {
 }
 
 @media all and (max-width: 768px) {
+    #user-log {
+        width: 50%;
+    }
+
+    input {
+        width: 50%;
+    }
+
     p {
         font-size: 1.1rem;
     }
