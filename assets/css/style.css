@@ -163,6 +163,7 @@ label {
     font-size: 90%;
     color: var(--pink);
     padding-top: 1.2rem;
+    padding: 1.2rem 0.5rem 0;
 }
 
 /* Modal with game instructions */
@@ -299,11 +300,15 @@ footer a:hover {
 /* Media querry adjustments for different screen sizes */
 
 @media all and (max-width: 390px) {
+    /* Style main page */
+    /* Adjust game container size for iPhone5 screen */
     #game-container {
         top: 40%;
+        width: 90%;
+
     }
 
-    .button {
+    #user-log {
         width: 50%;
     }
 
@@ -322,4 +327,31 @@ footer a:hover {
         float: none !important;
         clear: left;
     }  
+
+    /* Style game screen */
+    .top-line {
+        font-size: 80%;
+    }
+
+    #next-phrase, #try-again, #restart-game {
+        width: 70%;
+    }
+
+    #next-prase, #restart game {
+        margin-bottom: 0.5rem;
+    }
+
+    .result-image img {
+        width: 23%;
+    }
+}
+
+@media all and (max-width: 768px) {
+    p {
+        font-size: 1.1rem;
+    }
+
+    .result-image img {
+        width: 23%;
+    }
 }
