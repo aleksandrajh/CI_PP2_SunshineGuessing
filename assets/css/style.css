@@ -313,6 +313,11 @@ a:hover {
     line-height: normal;
 }
 
+.image-404 img {
+    width: 35%;
+    padding: 1.5rem 0;
+}
+
 /* Media querry adjustments for different screen sizes */
 
 @media all and (max-width: 390px) {
@@ -377,5 +382,9 @@ a:hover {
 
     .result-image img {
         width: 23%;
+    }
+
+    .image-404 img {
+        width: 50%;
     }
 }
