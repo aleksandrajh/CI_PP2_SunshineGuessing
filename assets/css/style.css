@@ -176,9 +176,9 @@ label {
 .show-modal {
     color: var(--pink);
     width: 100%;
-    height: 30rem;
+    height: 40rem;
     max-height: 30rem;
-    max-width: 40rem;
+    max-width: 50rem;
     align-items: center;
     display: block;
     z-index: 2;
@@ -188,6 +188,7 @@ label {
     box-shadow: 1px 1px 20px var(--loblolly);
     padding: 4%;
     display: block !important;
+    height: 100%;
 }
 
 /* Buttons to select game level */
@@ -297,6 +298,20 @@ footer a:hover {
     color: var(--pink);
 }
 
+/* contact form */
+a {
+    text-decoration: none;
+    padding: inherit;
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+.btn-send-form {
+    line-height: normal;
+}
 
 /* Media querry adjustments for different screen sizes */
 
