@@ -171,6 +171,7 @@ label {
 #modal-header {
     font-weight: bold;
     font-family: 'Rammetto One', cursive;
+    padding-bottom: 0.5rem;
 }
 
 .show-modal {
