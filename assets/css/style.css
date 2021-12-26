@@ -7,7 +7,7 @@
     --pink: #CF2857;
     --navy-blue: #1B212B;
     --sky: #7bb4e0;
-    --loblolly: #b0d3e8;
+    --light-blue: #b0d3e8;
     --light-orange: #FCCD4D;
     --orange: #F8B500;
 }
@@ -71,13 +71,13 @@ h3 {
 
 /* Style top line of the game container, icons and text inside it */
 .top-line {
-    line-height:2.5rem;
+    line-height: 2.5rem;
     text-align: right;
     padding-bottom: 0.5rem;
 }
 
 .user-icon {
-    font-size:250%; 
+    font-size: 250%; 
     float: left;
 }
 
@@ -128,8 +128,8 @@ input, label {
 }
 
 input {
-    box-shadow: 1px 1px 10px var(--loblolly);
-    border: 1px solid var(--loblolly);
+    box-shadow: 1px 1px 10px var(--light-blue);
+    border: 1px solid var(--light-blue);
     padding: 0.7rem;
     font-weight: bold;
     width: 35%;
@@ -186,7 +186,7 @@ label {
 }
 
 .modal-content {
-    box-shadow: 1px 1px 20px var(--loblolly);
+    box-shadow: 1px 1px 20px var(--light-blue);
     padding: 4%;
     display: block !important;
     height: 100%;
@@ -280,7 +280,6 @@ footer {
     top: 95%;
     left: 50%;
     transform: translate(-50%, -45%);
-
 }
 
 footer p {
@@ -293,7 +292,7 @@ footer a {
     font-size: 1.6rem;
     padding-right: 0.5rem;
     color: var(--navy-blue);
-    }
+}
 
 footer a:hover {
     color: var(--pink);
@@ -321,13 +320,34 @@ a:hover {
 
 /* Media querry adjustments for different screen sizes */
 
+@media all and (max-width: 768px) {
+    #user-log {
+        width: 50%;
+    }
+
+    input {
+        width: 50%;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .image-result img {
+        width: 25%;
+    }
+
+    .image-404 img {
+        width: 50%;
+    }
+}
+
 @media all and (max-width: 390px) {
     /* Style main page */
     /* Adjust game container size for iPhone5 screen */
     #game-container {
         top: 40%;
         width: 90%;
-
     }
 
     #user-log {
@@ -363,29 +383,7 @@ a:hover {
         margin-bottom: 0.5rem;
     }
 
-    .result-image img {
-        width: 23%;
-    }
-}
-
-@media all and (max-width: 768px) {
-    #user-log {
-        width: 50%;
-    }
-
-    input {
-        width: 50%;
-    }
-
-    p {
-        font-size: 1.1rem;
-    }
-
-    .result-image img {
-        width: 23%;
-    }
-
-    .image-404 img {
-        width: 50%;
+    .image-result img {
+        width: 40%;
     }
 }
