@@ -281,7 +281,7 @@ let gameSetup = (function () {
             'Bear',
             'Dolphin'
         ]
-    }
+    };
 
     /**
      * Displays the relevant image depending on the level of game selected by the user

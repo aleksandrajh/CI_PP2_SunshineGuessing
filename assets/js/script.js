@@ -42,7 +42,7 @@ function showInstructions() {
     let modal = document.getElementById("myModal");
     modal.classList.add("show-modal");
     document.body.classList.add('greyout-background'); //grey out the background picture when modal pops-up.
-};
+}
 
 function closeInstructions() {
     let modal = document.getElementById("myModal");
@@ -56,7 +56,7 @@ function closeInstructions() {
 document.getElementById("user-log").addEventListener("click", checkUsername);
 
 function checkUsername() {
-    let username = document.getElementById("user").value.trim()
+    let username = document.getElementById("user").value.trim();
 
     if (username.length >= 1 && username.length <= 12) {
         chooseLevelScreen.style.display = "block";
@@ -103,7 +103,7 @@ function selectGameLevel() {
         setGame(gameLevel);
     });
 }
-selectGameLevel()
+selectGameLevel();
 
 /**
  * Set the game screen based on level selected.
@@ -196,7 +196,7 @@ function keyboardEventListeners() {
             button.disabled = true;
             checkLetter(letter);
         }
-    })
+    });
 
     document.addEventListener("keydown", function logKey(event) {
         let letterPressed = event.key.toUpperCase();
