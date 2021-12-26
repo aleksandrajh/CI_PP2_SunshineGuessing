@@ -26,19 +26,16 @@
     <div id="game-container" class="border-2 rounded bg-light">
         <!-- top line of game container with icons, username, level of game currently played -->
         <div class="top-line">         
-            <i class="far fa-user-circle user-icon" id="user-icon"></i>
+            <i class="far fa-user-circle user-icon" id="user-icon" aria-hidden="true"></i>
             <p id="username"></p>
             <div id="difficulty-level"></div>
 
-              <span class="fa-stack fa-lg cloud-icon" id="cloud-icon" alt="Cloud icon showing remaining guesses in the round">
+              <span class="fa-stack fa-lg cloud-icon" id="cloud-icon" aria-hidden="true">
                 <i class="fas fa-cloud fa-stack-2x"></i>
                 <span class="fa fa-stack-1x" id="guesses"></span>
               </span>
 
-            <button id="instructions-icon">
-                <i class="far fa-question-circle" alt="Open game instructions icon"></i>
-            </button>
-
+                <i class="far fa-question-circle" id="instructions-icon" aria-label="Open game instructions icon"></i>
         </div>
 
         <!-- Main screen with game title and user login -->
