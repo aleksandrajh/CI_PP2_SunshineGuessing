@@ -313,9 +313,9 @@ a:hover {
     line-height: normal;
 }
 
-.image-404 img {
+.image-other-screens img {
     width: 35%;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
 }
 
 /* Media querry adjustments for different screen sizes */
@@ -337,7 +337,7 @@ a:hover {
         width: 25%;
     }
 
-    .image-404 img {
+    .image-other-screens img {
         width: 50%;
     }
 }
@@ -385,5 +385,9 @@ a:hover {
 
     .image-result img {
         width: 40%;
+    }
+
+    .image-other-screens img {
+        width: 65%;
     }
 }

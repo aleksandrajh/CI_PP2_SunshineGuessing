@@ -15,6 +15,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
         .then(() => {
             sendFormButton.value = "Send";
             formSubmittedMessage();
+
         }, (err) => {
             console.log(JSON.stringify(err));
         });
@@ -23,7 +24,7 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
 
 function formSubmittedMessage() {
     let message = `
-            <div class="image-404">
+            <div class="image-other-screens">
                 <img src="assets/images/contact-form-thankyou-image.png" alt="Sun image with thank you writing">
             </div>
             <a href="index.html" class="button my-3">Go back</a>
