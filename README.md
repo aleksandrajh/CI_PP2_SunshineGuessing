@@ -13,7 +13,7 @@ The goal of this project was to create an interactive and user-friendly version 
 ### User Goals
 
 - Play a game with simple rules that is fun and engaging
-- Challenge themselves on different word and phrases
+- Challenge themselves on different words and phrases
 
 ### Site Owner Goals
 
@@ -43,8 +43,24 @@ The goal of this project was to create an interactive and user-friendly version 
 
 ### Site User
 
+1. I want to easily understand the rules of the game
+2. I want to enter my name and have it visible on screen while the game is played
+3. I want to be able to choose a difficulty level for the game
+4. I want to have different categories of phrases to guess from
+5. I want to be able to play the game both by clicking the mouse and by using the keyboard
+6. I want to be able to see which letters I have already guessed and the number of guesses I have left in the round
+7. I want to see my result after I guessed the phrase
+8. I want to see the phrase I didn’t manage to guess
+9. I want to be able to play the game on desktop, tablet and mobile devices
+10. I want to be able to get in touch with the developer
+11. I want to be sure that my message has been sent
+
 ### Site Owner
 
+12. I want user to easily understand the game
+13. I want the user to be able to challenge themselves
+14. I want my game to be fully responsive
+15. I want the user to come to a 404 page instead of having to use the browser back button if they're searching for a page which does not exist
 
 ## Design
 
