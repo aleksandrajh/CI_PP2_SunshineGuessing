@@ -52,7 +52,7 @@ let gameSetup = (function () {
             'Oscar Wilde',
             'Justin Bieber',
             'Leonardo da Vinci',
-            'Ludwig Beethoven'
+            'Ludwig van Beethoven'
         ],
 
         book: [
