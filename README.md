@@ -26,14 +26,24 @@ The goal of this project was to create an interactive and user-friendly version 
 
 ### Target Audience
 
+- The game can be played by anyone who likes word guessing games
+- Anyone who wants to have fun playing a game with simple and clear rules
+
 ### User Requirements and Expectations
+
+- Easy to understand game rules
+- Simple navigation
+- Simple presentation of content on the page that makes logical sense
+- A responsive wesite that allows the user to play the game on any devise
+- Links and functions that work as expected
+- An easy way to contact the developer and leave feedback
+- Accessibility
 
 ## User Stories
 
 ### Site User
 
 ### Site Owner
-
 
 
 ## Design
