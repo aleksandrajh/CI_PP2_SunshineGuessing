@@ -64,11 +64,32 @@ The goal of this project was to create an interactive and user-friendly version 
 
 ## Design
 
-### Colour
+### Colour Scheme
+
+The colour scheme across the screens was kept simple and consistent and was inspired by the colours of the sky and sun.
+- For the contrast, the shade of the pink was used for error message and unguessed phrase
+- Game title and game navigation buttons are orange
+
+The pallet used was found on [Colormind.io](http://colormind.io/)
+<img src="docs/colour-pallet-sgg.JPG">
 
 ### Fonts
 
+Google Fonts were implemented on the website. Nunito with sans-serif fallback was used across all screens as I found it highly readable and clear. To reflect the fun aspect of the game, the Rammetto One with a cursive fallback were used for the game title and instructions heading.
+
 ### Structure
+
+The structure of the website was designed to be easy to learn and navigate. Each screen of the game appears in the same container with maintained harmony of all elements within.
+
+- The game consist of the following screens:
+  - A home page / start screen with instructions icon in the top line, game title and user login
+  - Choose game difficulty level screen
+  - Main game screen - it contains the category of the phrase, number of guesses remaining in the round, hidden phrase with underscores for each letter, alphabet letters to click, current score and high score
+  - Screen shown when the phrase has been guessed - the number of points gained in the round and overall scoring are displayed
+  - Screen shown when the phrase has not been guessed within specific number of guesses. The correct phrase and options to either restart the game on same level or select other game level are shown
+- A modal with game instructions which pops up when the instructions icon is clicked, available on all game screens
+- The contact page with contact form which allows users to send an email to the developer and provide their feedback
+- A separate 404 error page
 
 ### Wireframes
 
