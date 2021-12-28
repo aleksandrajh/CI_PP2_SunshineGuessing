@@ -346,7 +346,8 @@ a:hover {
     /* Style main page */
     /* Adjust game container size for iPhone5 screen */
     #game-container {
-        top: 40%;
+        top: 42%;
+        height: 80%;
         width: 90%;
     }
 
