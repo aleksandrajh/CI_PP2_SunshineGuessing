@@ -1,15 +1,26 @@
 # Sunshine Guessing Game <img src="assets\images\correct-answer-full-sun.png" style="width: 40px;height:40px;">
 
 **Developer: Aleksandra Haniok**
+
 [Visit live website](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/)
 
 ![Mockup image](docs/ami-responsivedesign-sunshineguessing.PNG)
 
 ## Project Goals
 
+The goal of this project was to create an interactive and user-friendly version of the well-known Hangman game.
+
 ### User Goals
 
+- Play a game with simple rules that is fun and engaging
+- Challenge themselves on different word and phrases
+
 ### Site Owner Goals
+
+- Create a game which is entertaining and engaging
+- Create visually appealing design
+- Create a simple navigation around website
+- Provide fully responsive and accessible website
 
 ## User Experience
 
