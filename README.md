@@ -134,12 +134,12 @@ The structure of the website was designed to be easy to learn and navigate. Each
 ### HTML Validation
 
 The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors.
-<details><summary>All site</summary>
-<img src="docs/validation-html-game.JPG">
+<details><summary>Home</summary>
+<img src="docs/validation/validation-html-game.JPG">
 </details>
 
 <details><summary>Contact form page</summary>
-<img src="docs/validation-html-contact.JPG">
+<img src="docs/validation/validation-html-contact.JPG">
 </details>
 
 <details><summary>404 error page</summary>
@@ -188,6 +188,13 @@ All site pass with 0 errors.
 
 ### Performance
 
+Google Lighthouse in Google Chrome Developer Tools was used to test the performance of the website.
+<details><summary>Home page</summary><img src="docs/validation/validation-lighthouse-performance-home.JPG">
+</details>
+<details><summary>Contact form page</summary><img src="docs/validation/validation-lighthouse-performance-contact.JPG">
+</details>
+<details><summary>404 page</summary><img src="docs/validation/validation-lighthouse-performance-404-page.JPG">
+</details>
 
 ## Testing
 
