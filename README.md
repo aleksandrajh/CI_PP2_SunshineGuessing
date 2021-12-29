@@ -60,7 +60,7 @@ The goal of this project was to create an interactive and user-friendly version 
 12. I want user to easily understand the game
 13. I want the user to be able to challenge themselves
 14. I want my game to be fully responsive
-15. I want the user to come to a 404 page instead of having to use the browser back button if they're searching for a page which does not exist
+15. I want the user to come to a 404 error page instead of having to use the browser back button if they enter a url that does not exist
 
 ## Design
 
@@ -128,6 +128,127 @@ The structure of the website was designed to be easy to learn and navigate. Each
   
 ## Features
 
+The website has 3 webpages consisting of 11 distinct features described below.
+
+### Home screen
+
+#### Title animation
+- When the page is loaded the game title fades-in
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-game-title.JPG">
+</details>
+
+#### Username input
+- User is asked to enter their name in the input field. The username needs to be between 1 and 12 characters long. The are no restrictions on characters type. However, if the input field is left blank, then a feedback message is displayed for user to try again. Once a valid username has been provided, the name is displayed next to the user icon on the next screen and user is able to select the difficulty level of the game.
+- Username remains displayed on all game screens
+- User stories covered: 2
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-username-input.JPG">
+</details>
+
+### Instructions
+- A modal with game instructions which pops up when the instructions icon is clicked
+- Available on all game screens
+- Background color is set slightly darker than on the game screen
+- User stories covered: 1, 12
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-instructions.JPG">
+</details>
+
+### Footer
+- Featured on all pages
+- Contains link to contact form (opening in the same window), github page and social media (opening in a separate window)
+- User stories covered: 10
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-footer.JPG">
+</details>
+
+### Difficulty level screen
+- User can choose difficulty level of the game they wish to play
+- User stories covered: 3, 13
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-choose-difficulty-level-screen.JPG">
+</details>
+
+### Game screen
+- The below elements are displayed on the screen:
+  - Username
+  - Selected difficulty level of the game
+  - Number of guesses left in the round
+  - Game instructions icon
+  - Category of the phrase to be guessed
+  - Image representing how many guesses were made
+  - Underscores for each letter of the hidden phrase
+  - Alphabet which work on mouse click or keyboard press
+  - High score and current user score
+- User stories covered: 4, 5, 6
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-game-screen.JPG">
+</details>
+
+### Correct Guess Screen
+- The below elements are displayed on the screen:
+  - Username
+  - Difficulty level of the game that is being played
+  - Number of guesses that were left in the round - number of points scored
+  - Complimentary message to the user
+  - Number of points scored in the round
+  - Picture of smiley sun
+  - Button to start a new round
+  - High score and current user score
+- User stories covered: 7
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-game-correct-guess.JPG">
+</details>
+
+### Wrong Guess Screen
+- The below elements are displayed on the screen:
+  - Username
+  - Difficulty level of the game that was played
+  - Cloud icon with 0 guesses remaining
+  - Phrase which has not been guessed
+  - Picture of sad rainy cloud
+  - Buttons to restart the game on same level or change the level
+  - High score and current user score
+- User stories covered: 8
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-game-wrong-guess.JPG">
+</details>
+
+### Contact Form
+- User is able to provide feedback about the game
+- EmailJS has been used to send an email to developer with user's data and message
+- User stories covered: 10
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-contact-form.JPG">
+</details>
+
+### Contact Form sent confirmation
+- Thank you message is displayed
+- Contains return to the main screen button
+- User stories covered: 11
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-contact-form-sent.JPG">
+</details>
+
+### 404 error page
+- The site has been given a 404 error page which is displayed if the user enters a url that does not exist.
+- Contains return to the main screen button
+- User stories covered: 15
+
+<details><summary>See feature</summary>
+<img src="docs/features/feature-404-error-page.JPG">
+</details>
 
 ## Validation
 
