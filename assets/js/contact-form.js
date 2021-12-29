@@ -1,8 +1,3 @@
-input.onfocus = function () {
-    window.scrollTo(0, 0);
-    document.body.scrollTop = 0;
-}
-
 /**
  * Add an eventListener to listen for the submit.
  * Sends an email to site owner through emailJS if the submit is fired.

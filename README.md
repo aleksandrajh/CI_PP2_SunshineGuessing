@@ -162,6 +162,18 @@ When validating my own internal CSS, the validator shows no errors and four warn
 
 ### JavaScript Validation
 
+JSHint JS Validation Service was used to validate the Javascript files. No significant issues were found.
+
+<details><summary>game.js</summary>
+<img src="docs/validation/validation-js-game.JPG">
+</details>
+<details><summary>game-data.js</summary>
+<img src="docs/validation/validation-js-game-data.JPG">
+</details>
+<details><summary>contact-form.js</summary>
+<img src="docs/validation/validation-js-contact.JPG">
+</details>
+
 ### Accessibility
 
 ### Performance
