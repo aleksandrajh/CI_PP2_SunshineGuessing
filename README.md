@@ -94,7 +94,7 @@ The structure of the website was designed to be easy to learn and navigate. Each
 ### Wireframes
 
 <details><summary>Big screens - laptop & desktop</summary>
-<img src="docs/wireframes/wireframes-laptop.JPG">
+<img src="docs/wireframes/wireframes-laptop.jpg">
 </details>
 <details><summary>Medium screens - tablets</summary>
 <img src="docs/wireframes/wireframes-tablet.jpg">
@@ -277,8 +277,8 @@ When validating my own internal CSS, the validator shows no errors and four warn
 <img src="docs/validation/validation-css-site.JPG">
 </details>
 <details><summary>Style.css</summary>
-<img src="docs/validation/validation-css-style.jpg">
-<img src="docs/validation/validation-css-style2.jpg">
+<img src="docs/validation/validation-css-style.JPG">
+<img src="docs/validation/validation-css-style2.JPG">
 </details>
 
 ### JavaScript Validation
@@ -300,11 +300,11 @@ JSHint JS Validation Service was used to validate the Javascript files. No signi
 The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards.
 All site pass with 0 errors.
 
-<details><summary>Home page</summary><img src="docs/validation/validation-accessibility-all-site.jpg">
+<details><summary>Home page</summary><img src="docs/validation/validation-accessibility-all-site.JPG">
 </details>
-<details><summary>Contact form page</summary><img src="docs/validation/validation-accessibility-contact-form.jpg">
+<details><summary>Contact form page</summary><img src="docs/validation/validation-accessibility-contact-form.JPG">
 </details>
-<details><summary>404 page</summary><img src="docs/validation/validation-accessibility-404-page.jpg">
+<details><summary>404 page</summary><img src="docs/validation/validation-accessibility-404-page.JPG">
 </details>
 
 ### Performance
