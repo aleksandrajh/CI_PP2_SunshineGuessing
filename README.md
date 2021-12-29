@@ -160,7 +160,6 @@ When validating my own internal CSS, the validator shows no errors and four warn
 <img src="docs/validation/validation-css-style2.jpg">
 </details>
 
-
 ### JavaScript Validation
 
 ### Accessibility
