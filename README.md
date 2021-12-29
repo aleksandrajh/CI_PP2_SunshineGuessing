@@ -133,7 +133,33 @@ The structure of the website was designed to be easy to learn and navigate. Each
 
 ### HTML Validation
 
+The W3C Markup Validation Service was used to validate the HTML of the website. All pages pass with no errors.
+<details><summary>All site</summary>
+<img src="docs/validation-html-game.JPG">
+</details>
+
+<details><summary>Contact form page</summary>
+<img src="docs/validation-html-contact.JPG">
+</details>
+
+<details><summary>404 error page</summary>
+<img src="docs/validation/validation-html-404page.JPG">
+</details>
+
 ### CSS Validation
+
+The W3C Jigsaw CSS Validation Service was used to validate the CSS of the website.
+When validating all website, it passes with no errors. However, some warning are identified linked to Bootstrap v5.1.3.
+When validating my own internal CSS, the validator shows no errors and four warning associated with vendor extension (-webkit-appearance).
+
+<details><summary>All site</summary>
+<img src="docs/validation/validation-css-site.JPG">
+</details>
+<details><summary>Style.css</summary>
+<img src="docs/validation/validation-css-style.jpg">
+<img src="docs/validation/validation-css-style2.jpg">
+</details>
+
 
 ### JavaScript Validation
 
