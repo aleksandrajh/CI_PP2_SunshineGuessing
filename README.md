@@ -103,17 +103,30 @@ The structure of the website was designed to be easy to learn and navigate. Each
 <img src="docs/wireframes/wireframes-mobile.jpg">
 </details>
 
-
 ## Technologies Used
 
 ### Languages
 
+- HTML
+- CSS
+- JavaScript
+
 ### Frameworks, Libraries & Tools
 
-
-
+- [Am I Responsive](http://ami.responsivedesign.is/) was used to create the multi-device mock-up you can see at the start of this README.md file.
+- [Balsamiq](https://balsamiq.com/) to create the wireframes for the project
+- [Bootstrap v5.1.3](https://getbootstrap.com/)
+- [EmailJS](https://www.emailjs.com) used to send email from the contact form
+- [Favicon.io](https://favicon.io) for making the site favicon
+- [Font Awesome](https://fontawesome.com/) - Icons from Font Awesome were used throughout the site
+- [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [Google Fonts](https://fonts.google.com/)
+- [Pixabay.com](Pixabay.com) was used for pictures
+- [Remove.bg](https://www.remove.bg/) was used to remove background on logos
+- [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools) were used for debugging of the code and check site for responsiveness
+  
 ## Features
-
 
 
 ## Validation
