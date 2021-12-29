@@ -93,6 +93,17 @@ The structure of the website was designed to be easy to learn and navigate. Each
 
 ### Wireframes
 
+<details><summary>Big screens - laptop & desktop</summary>
+<img src="docs/wireframes/wireframes-laptop.JPG">
+</details>
+<details><summary>Medium screens - tablets</summary>
+<img src="docs/wireframes/wireframes-tablet.jpg">
+</details>
+<details><summary>Small screens - mobile</summary>
+<img src="docs/wireframes/wireframes-mobile.jpg">
+</details>
+
+
 ## Technologies Used
 
 ### Languages
