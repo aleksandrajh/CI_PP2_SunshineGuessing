@@ -176,6 +176,16 @@ JSHint JS Validation Service was used to validate the Javascript files. No signi
 
 ### Accessibility
 
+The WAVE WebAIM web accessibility evaluation tool was used to ensure the website met high accessibility standards.
+All site pass with 0 errors.
+
+<details><summary>Home page</summary><img src="docs/validation/validation-accessibility-all-site.jpg">
+</details>
+<details><summary>Contact form page</summary><img src="docs/validation/validation-accessibility-contact-form.jpg">
+</details>
+<details><summary>404 page</summary><img src="docs/validation/validation-accessibility-404-page.jpg">
+</details>
+
 ### Performance
 
 
