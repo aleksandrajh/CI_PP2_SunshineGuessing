@@ -148,7 +148,7 @@ The website has 3 webpages consisting of 11 distinct features described below.
 <img src="docs/features/feature-username-input.JPG">
 </details>
 
-### Instructions
+### Instructions Modal
 - A modal with game instructions which pops up when the instructions icon is clicked
 - Available on all game screens
 - Background color is set slightly darker than on the game screen
@@ -232,7 +232,7 @@ The website has 3 webpages consisting of 11 distinct features described below.
 <img src="docs/features/feature-contact-form.JPG">
 </details>
 
-### Contact Form sent confirmation
+### Contact Form confirmation screen
 - Thank you message is displayed
 - Contains return to the main screen button
 - User stories covered: 11
@@ -321,9 +321,156 @@ Google Lighthouse in Google Chrome Developer Tools was used to test the performa
 
 ### Performing tests on various devices
 
+The website was tested using Google Chrome Developer Tools Toggle Device Toolbar to simulate viewports of different devices.
+
+The website was tested on the following devices:
+- Lenovo B590 (laptop screen size)
+- Samsung Galaxy Tab A (tablet screen)
+- Samsung S7 (mobile screen)
+- Huawei P10 Lite (mobile screen)
+
 ### Browser compatibility
 
+- Testing has been carried out on the following browsers:
+  - Googe Chrome Version 96.0.4664.110 (Official Build) (64-bit)
+  - Firefox Browser 95.0.2 (64-bit)
+
 ### Testing user stories
+
+1. I want to easily understand the rules of the game
+
+| **Feature**       | **Action**        | **Expected Result**                  | **Actual Result** |
+| ----------------- | ----------------- | ------------------------------------ | ----------------- |
+| Instructions Icon | Click on the icon | Modal with game instructions pops up | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-1-a.JPG">
+<img src="docs/user-story-testing/user-story-1-b.JPG">
+</details>
+
+2. I want to enter my name and have it visible on screen while the game is played
+
+| **Feature**    | **Action**                                                           | **Expected Result**                               | **Actual Result** |
+| -------------- | -------------------------------------------------------------------- | ------------------------------------------------- | ----------------- |
+| Username input | Type user name (1-12 characters) and click button or press Enter key | User log in and name displayed in top left corner | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-2-a.JPG">
+<img src="docs/user-story-testing/user-story-2-b.JPG">
+<img src="docs/user-story-testing/user-story-2-c.JPG">
+</details>
+
+3. I want to be able to choose a difficulty level for the game
+
+
+| **Feature**             | **Action**                                                             | **Expected Result**                                                                                                 | **Actual Result** |
+| ----------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Difficulty level screen | Click one of the three buttons on the screen to play the relevant game | The game level screen loads of the chosen game. Game level and number of guesses are displayed on top right corner. | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-3-a.JPG">
+<img src="docs/user-story-testing/user-story-3-b.JPG">
+<img src="docs/user-story-testing/user-story-3-c.JPG">
+<img src="docs/user-story-testing/user-story-3-d.JPG">
+</details>
+
+4. I want to have different categories of phrases to guess from
+
+| **Feature**                           | **Action**                               | **Expected Result**                                                       | **Actual Result** |
+| ------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------------- | ----------------- |
+| Difficulty level screen & Game screen | Select the level of desired game to play | The phrase category is displayed on the game screen above the sun picture | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-4-a.JPG">
+<img src="docs/user-story-testing/user-story-4-b.JPG">
+</details>
+
+5. I want to be able to play the game both by clicking the mouse and by using the keyboard
+
+| **Feature** | **Action**                                                               | **Expected Result**                                                                        | **Actual Result** |
+| ----------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ | ----------------- |
+| Game screen | Click on the displayed alphabet buttons or press the key on the keyboard | The letter which have already been clicked/pressed changes color and cannot be used again. | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-5-a.JPG">
+<img src="docs/user-story-testing/user-story-5-b.JPG">
+</details>
+
+
+6. I want to be able to see which letters I have already guessed and the number of guesses I have left in the round
+
+| **Feature** | **Action**                                                               | **Expected Result**                                                                                              | **Actual Result** |
+| ----------- | ------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------- | ----------------- |
+| Game screen | Click on the displayed alphabet buttons or press the key on the keyboard | Used letters change color and cannot be used again. Number of remaining guesses is displayed in top right corner | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-6-a.JPG">
+<img src="docs/user-story-testing/user-story-6-b.JPG">
+</details>
+
+7. I want to see my result after I guessed the phrase
+
+| **Feature**          | **Action**                                                                            | **Expected Result**                                             | **Actual Result** |
+| -------------------- | ------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------------- |
+| Correct Guess Screen | Guess the hidden phrase within specific number of guesses for the game level selected | The message and number of points scored in the round displayed. | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-7.JPG">
+</details>
+
+8. I want to see the phrase I didn’t manage to guess
+
+| **Feature**        | **Action**                                              | **Expected Result**             | **Actual Result** |
+| ------------------ | ------------------------------------------------------- | ------------------------------- | ----------------- |
+| Wrong Guess Screen | All guesses were used and the hidden phrase not guessed | The correct phrase is displayed | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-8.JPG">
+</details>
+
+9. I want to be able to play the game on desktop, tablet and mobile devices
+
+| **Feature**                                   | **Action**                | **Expected Result**                      | **Actual Result** |
+| --------------------------------------------- | ------------------------- | ---------------------------------------- | ----------------- |
+| Every page has been designed to be responsive | Change device screen size | The site works on different screen sizes | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-9-a.JPG">
+<img src="docs/user-story-testing/user-story-9-b.JPG">
+<img src="docs/user-story-testing/user-story-9-c.JPG">
+<img src="docs/user-story-testing/user-story-9-d.JPG">
+</details>
+
+10. I want to be able to get in touch with the developer
+
+| **Feature**  | **Action**                               | **Expected Result**       | **Actual Result** |
+| ------------ | ---------------------------------------- | ------------------------- | ----------------- |
+| Contact Form | Click on the envelope icon in the footer | Displays the contact form | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-10-a.JPG">
+<img src="docs/user-story-testing/user-story-10-b.JPG">
+</details>
+
+11. I want to be sure that my message has been sent
+
+| **Feature**                      | **Action**                                           | **Expected Result**                        | **Actual Result** |
+| -------------------------------- | ---------------------------------------------------- | ------------------------------------------ | ----------------- |
+| Contact Form confirmation screen | Fill in the contact form and click the submit button | The contact form confirmation is displayed | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-11-a.JPG">
+<img src="docs/user-story-testing/user-story-11-b.JPG">
+</details>
+
+
+
+
+12. I want user to easily understand the game
+13. I want the user to be able to challenge themselves
+14. I want my game to be fully responsive
+15. I want the user to come to a 404 error page instead of having to use the browser back button if they enter a url that does not exist
+
 
 
 ## Bugs
