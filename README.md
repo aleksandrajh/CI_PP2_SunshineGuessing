@@ -61,6 +61,7 @@ The goal of this project was to create an interactive and user-friendly version 
 13. I want the user to be able to challenge themselves
 14. I want my game to be fully responsive
 15. I want the user to come to a 404 error page instead of having to use the browser back button if they enter a url that does not exist
+16. I want user to be able to contact me and provide their feedback
 
 ## Design
 
@@ -362,7 +363,6 @@ The website was tested on the following devices:
 
 3. I want to be able to choose a difficulty level for the game
 
-
 | **Feature**             | **Action**                                                             | **Expected Result**                                                                                                 | **Actual Result** |
 | ----------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------- |
 | Difficulty level screen | Click one of the three buttons on the screen to play the relevant game | The game level screen loads of the chosen game. Game level and number of guesses are displayed on top right corner. | Works as expected |
@@ -463,15 +463,60 @@ The website was tested on the following devices:
 <img src="docs/user-story-testing/user-story-11-b.JPG">
 </details>
 
-
-
-
 12. I want user to easily understand the game
-13. I want the user to be able to challenge themselves
+
+| **Feature**       | **Action**                      | **Expected Result**                  | **Actual Result** |
+| ----------------- | ------------------------------- | ------------------------------------ | ----------------- |
+| Instructions Icon | Click on the icon on any screen | Modal with game instructions pops up | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-12-a.JPG">
+<img src="docs/user-story-testing/user-story-12-b.JPG">
+</details>
+
+13.  I want the user to be able to challenge themselves
+
+| **Feature**             | **Action**                                                                                                                  | **Expected Result**                             | **Actual Result** |
+| ----------------------- | --------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- | ----------------- |
+| Difficulty level screen | User selects on of the three available levels of the game which includes the hard version with only a few available guesses | The game level screen loads of the chosen game. | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-13.JPG">
+</details>
+
 14. I want my game to be fully responsive
-15. I want the user to come to a 404 error page instead of having to use the browser back button if they enter a url that does not exist
 
+| **Feature**                                   | **Action**                | **Expected Result**                      | **Actual Result** |
+| --------------------------------------------- | ------------------------- | ---------------------------------------- | ----------------- |
+| Every page has been designed to be responsive | Change device screen size | The site works on different screen sizes | Works as expected |
 
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-14-a.JPG">
+<img src="docs/user-story-testing/user-story-14-b.JPG">
+<img src="docs/user-story-testing/user-story-14-c.JPG">
+<img src="docs/user-story-testing/user-story-14-d.JPG">
+</details>
+
+15.  I want the user to come to a 404 error page instead of having to use the browser back button if they enter a url that does not exist
+
+| **Feature**    | **Action**           | **Expected Result**                                                                       | **Actual Result** |
+| -------------- | -------------------- | ----------------------------------------------------------------------------------------- | ----------------- |
+| 404 error page | Page cannot be found | When a user types the wrong address or cannot find a page they are rerouted to a 404 page | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-15.JPG">
+</details>
+
+16. I want user to be able to contact me and provide their feedback
+
+| **Feature**  | **Action**                                                  | **Expected Result**                                              | **Actual Result** |
+| ------------ | ----------------------------------------------------------- | ---------------------------------------------------------------- | ----------------- |
+| Contact Form | User fills in the contact form and clicks the submit button | Developer receives email with user's contact details and message | Works as expected |
+
+<details><summary>Screenshot</summary>
+<img src="docs/user-story-testing/user-story-16-a.JPG">
+<img src="docs/user-story-testing/user-story-16-b.JPG">
+</details>
 
 ## Bugs
 
