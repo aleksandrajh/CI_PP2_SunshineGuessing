@@ -120,11 +120,13 @@ The structure of the website was designed to be easy to learn and navigate. Each
 - [EmailJS](https://www.emailjs.com) used to send email from the contact form
 - [Favicon.io](https://favicon.io) for making the site favicon
 - [Font Awesome](https://fontawesome.com/) - Icons from Font Awesome were used throughout the site
+- Gimp and Microsoft Paint were used to create game pictures and resize background image
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
 - [Google Fonts](https://fonts.google.com/)
 - [Pixabay.com](Pixabay.com) was used for pictures
 - [Remove.bg](https://www.remove.bg/) was used to remove background on logos
+- [This source](https://chir.ag/projects/name-that-color) was used to initially name root colors from the colour pallet. I have removed unwanted colors and renamed all during the development of the project.
 - [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools) were used for debugging of the code and check site for responsiveness
 - [WC3 Validator](https://validator.w3.org/), [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/), [JShint](https://jshint.com/), [Wave Validator](https://wave.webaim.org/), [Lighthouse](https://developers.google.com/web/tools/lighthouse/) and [Am I Responsive](http://ami.responsivedesign.is/) were all used to validate the website
 
@@ -549,6 +551,21 @@ The website was deployed using GitHub Pages by following these steps:
 
 ### Images
 
+- Site icons in top line of game container and footer were taken from [Fontawesome](https://fontawesome.com/)
+- Sun & cloud clipart in the main game screen was taken from [clipartmax](https://www.clipartmax.com/middle/m2i8m2m2d3G6Z5d3_sun-clouds-cloud/) and amended with Microsoft Paint.
+- Sad cloud and smiley sun cliparts for the result screens were taken from [pinclipart](https://www.pinclipart.com/pindetail/iToJibw_cloud-with-rain-emoji-clipart-cartoon-cloud-gif/) & [clipartbest](http://www.clipartbest.com/clipart-xcg6L7Moi)
+- Background image: photo found on [unsplash](https://unsplash.com/photos/lR96g3H5VmA)
+- Image for contact form confirmation was used from [shutterstock](https://www.shutterstock.com/es/search/thank+you+sun)
+- 404 error page image was taken from [dreamstime](https://www.dreamstime.com/stock-illustration-vector-thunder-cloud-storm-tornado-mascot-lightning-bolts-cartoon-clip-art-illustration-tough-thundercloud-image77616772)
+
 ### Code
+- [Instructions Modal](https://getbootstrap.com/docs/5.1/components/modal) was built using the Bootstrap v5.1.3 documentation
+- [EmailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form) official tutorial was used to create a contact form with email being sent to desired address
+- Front page with login input element was inspired by [The Anagram Game](https://elainebroche-dev.github.io/ms2-anagram/) by Elainebroche
+- Game title with a gradient was created with [CSS Text Gradient Generator](https://www.cssportal.com/css-text-gradient-generator/)
+- Fade-in effect for game title was made using [this source](https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/)
+- [w3schools](https://www.w3schools.com/js/js_timing.asp) was checked to set a time delay for wrong guess screen
+- [Fontawesome documentation](https://fontawesome.com/v4.7/examples/) was reviewed to implement a cloud icon with number of remaining guesses over it
+-  [w3schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2) was reviewed to change input focus color
 
 ## Acknowledgements
