@@ -76,7 +76,7 @@ The pallet used was found on [Colormind.io](http://colormind.io/)
 
 ### Fonts
 
-Google Fonts were implemented on the website. Nunito with sans-serif fallback was used across all screens as I found it highly readable and clear. To reflect the fun aspect of the game, the Rammetto One with a cursive fallback were used for the game title and instructions heading.
+Google Fonts were implemented on the website. Nunito with sans-serif fallback was used across all screens as I found it highly readable and clear. To reflect the fun aspect of the game, the Rammetto One with a cursive fallback was used for the game title and instructions heading.
 
 ### Structure
 
@@ -124,7 +124,6 @@ The structure of the website was designed to be easy to learn and navigate. Each
 - [Git](https://git-scm.com/) was used for version control within VSCode to push the code to GitHub
 - [GitHub](https://github.com/) was used as a remote repository to store project code
 - [Google Fonts](https://fonts.google.com/)
-- [Pixabay.com](Pixabay.com) was used for pictures
 - [Remove.bg](https://www.remove.bg/) was used to remove background on logos
 - [This source](https://chir.ag/projects/name-that-color) was used to initially name root colors from the colour pallet. I have removed unwanted colors and renamed all during the development of the project.
 - [Chrome dev tools](https://developers.google.com/web/tools/chrome-devtools) were used for debugging of the code and check site for responsiveness
@@ -188,7 +187,7 @@ The website has 3 webpages consisting of 11 distinct features described below.
   - Category of the phrase to be guessed
   - Image representing how many guesses were made
   - Underscores for each letter of the hidden phrase
-  - Alphabet which work on mouse click or keyboard press
+  - Alphabet buttons which work on mouse click or keyboard press
   - High score and current user score
 - User stories covered: 4, 5, 6
 
@@ -366,9 +365,9 @@ The website was tested on the following devices:
 
 3. I want to be able to choose a difficulty level for the game
 
-| **Feature**             | **Action**                                                             | **Expected Result**                                                                                                 | **Actual Result** |
-| ----------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| Difficulty level screen | Click one of the three buttons on the screen to play the relevant game | The game level screen loads of the chosen game. Game level and number of guesses are displayed on top right corner. | Works as expected |
+| **Feature**             | **Action**                                                             | **Expected Result**                                                                                     | **Actual Result** |
+| ----------------------- | ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------- | ----------------- |
+| Difficulty level screen | Click one of the three buttons on the screen to play the relevant game | The chosen game level screen loads. Game level and number of guesses are displayed on top right corner. | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/user-story-testing/user-story-3-a.JPG">
@@ -423,9 +422,9 @@ The website was tested on the following devices:
 
 8. I want to see the phrase I didn’t manage to guess
 
-| **Feature**        | **Action**                                              | **Expected Result**             | **Actual Result** |
-| ------------------ | ------------------------------------------------------- | ------------------------------- | ----------------- |
-| Wrong Guess Screen | All guesses were used and the hidden phrase not guessed | The correct phrase is displayed | Works as expected |
+| **Feature**        | **Action**                                                  | **Expected Result**             | **Actual Result** |
+| ------------------ | ----------------------------------------------------------- | ------------------------------- | ----------------- |
+| Wrong Guess Screen | All guesses were used and the hidden phrase was not guessed | The correct phrase is displayed | Works as expected |
 
 <details><summary>Screenshot</summary>
 <img src="docs/user-story-testing/user-story-8.JPG">
