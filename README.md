@@ -523,6 +523,15 @@ The website was tested on the following devices:
 
 ## Bugs
 
+| Bug                                                                                                                             | Fix                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| All div with difficulty level buttons was responsive to click event and game level which appeared on the game screen was 'null' | Added code for click event to only respond on elements with specific class (buttons)   |
+| W3C Markup Validation Service highlighted that heading was not closed                                                           | Corrected the error by closing the h1 tag                                              |
+| Number of remaining guesses displayed on the cloud icon went below 0                                                            | Amended code to display 0 when there were no guesses left                              |
+| Images for medium & hard level game were not showing on the game screen                                                         | There was an error in image path in game-data.js file which I corrected                |
+| Game container was going off the screen for iPhone 5/ SE when tested with Chrome DevTools                                       | Changed offset of game container for screens max-width: 390px                          |
+| When added footer to the game screen it was located at the top of the screen                                                    | Set footer with position absolute                                                      |
+| Whilst the contact form was validated, no data was sent to email                                                                | Set up an email template and amended code with specific contact_service & contact_form |
 
 ## Deployment
 
@@ -560,7 +569,7 @@ The website was deployed using GitHub Pages by following these steps:
 
 ### Code
 - [Instructions Modal](https://getbootstrap.com/docs/5.1/components/modal) was built using the Bootstrap v5.1.3 documentation
-- [EmailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form) official tutorial was used to create a contact form with email being sent to desired address
+- [EmailJS](https://www.emailjs.com/docs/tutorial/creating-contact-form) official tutorial & playground environment within EmailJS Email Templates were used to create a contact form with email being sent to desired address
 - Front page with login input element was inspired by [The Anagram Game](https://elainebroche-dev.github.io/ms2-anagram/) by Elainebroche
 - Game title with a gradient was created with [CSS Text Gradient Generator](https://www.cssportal.com/css-text-gradient-generator/)
 - Fade-in effect for game title was made using [this source](https://www.geeksforgeeks.org/how-to-create-fade-in-effect-on-page-load-using-css/)
