@@ -578,3 +578,6 @@ The website was deployed using GitHub Pages by following these steps:
 -  [w3schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2) was reviewed to change input focus color
 
 ## Acknowledgements
+Many thanks to everyone who supported me in the development of the website:
+- Most importantly, to my mentor Mo Shami for professional guidance and making me think outside of the box
+- Friends and family who played the game on their tablets and mobiles and provided feedback on responsiveness
