@@ -21,7 +21,9 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
         });
 });
 
-
+/**
+ * Display a thank you image on the screen once the contact form has been submitted
+ */
 function formSubmittedMessage() {
     let message = `
             <div class="image-other-screens">
