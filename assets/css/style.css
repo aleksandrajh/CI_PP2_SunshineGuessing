@@ -38,7 +38,7 @@ body::before {
     height: 100vh;
     background: url(../images/clouds-background-resized.jpg);
     background-color: var(--sky);
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
     opacity: .7;
     z-index: -1;
