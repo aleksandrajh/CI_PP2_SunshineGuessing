@@ -1,4 +1,15 @@
 /**
+ * Prevent contact form container going off the mobile screen when clicking on input field & keyboard being shown on screen
+*/
+$(document).ready(function () {
+    if ($(window).width() <= 414) {
+        document.getElementsByTagName("input")[0].addEventListener('click', function () {
+            document.getElementById("game-container").style.top = "75%";
+        });
+    }
+});
+
+/**
  * Add an eventListener to listen for the submit.
  * Sends an email to site owner through emailJS if the submit is fired.
  * Script taken from the official EmailJS tutorial https://www.emailjs.com/docs/tutorial/creating-contact-form/ 
