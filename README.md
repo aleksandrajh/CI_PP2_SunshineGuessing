@@ -611,6 +611,7 @@ The website was deployed using GitHub Pages by following these steps:
 - [w3schools](https://www.w3schools.com/js/js_timing.asp) was checked to set a time delay for wrong guess screen
 - [Fontawesome documentation](https://fontawesome.com/v4.7/examples/) was reviewed to implement a cloud icon with number of remaining guesses over it
 -  [w3schools](https://www.w3schools.com/css/tryit.asp?filename=trycss_form_focus2) was reviewed to change input focus color
+-  Fixed contact form container going off mobile screen when clicking on input field with use of [this](https://brightwhiz.com/running-javascript-based-on-screen-size/) source
 
 ## Acknowledgements
 Many thanks to everyone who supported me in the development of the website:
