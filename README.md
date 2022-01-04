@@ -556,15 +556,17 @@ The website was tested on the following devices:
 
 ## Bugs
 
-| Bug                                                                                                                             | Fix                                                                                    |
-| ------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
-| All div with difficulty level buttons was responsive to click event and game level which appeared on the game screen was 'null' | Added code for click event to only respond on elements with specific class (buttons)   |
-| W3C Markup Validation Service highlighted that heading was not closed                                                           | Corrected the error by closing the h1 tag                                              |
-| Number of remaining guesses displayed on the cloud icon went below 0                                                            | Amended code to display 0 when there were no guesses left                              |
-| Images for medium & hard level game were not showing on the game screen                                                         | There was an error in image path in game-data.js file which I corrected                |
-| Game container was going off the screen for iPhone 5/ SE when tested with Chrome DevTools                                       | Changed offset of game container for screens max-width: 390px                          |
-| When added footer to the game screen it was located at the top of the screen                                                    | Set footer with position absolute                                                      |
-| Whilst the contact form was validated, no data was sent to email                                                                | Set up an email template and amended code with specific contact_service & contact_form |
+| Bug                                                                                                                                         | Fix                                                                                    |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| All div with difficulty level buttons was responsive to click event and game level which appeared on the game screen was 'null'             | Added code for click event to only respond on elements with specific class (buttons)   |
+| W3C Markup Validation Service highlighted that heading was not closed                                                                       | Corrected the error by closing the h1 tag                                              |
+| Number of remaining guesses displayed on the cloud icon went below 0                                                                        | Amended code to display 0 when there were no guesses left                              |
+| Images for medium & hard level game were not showing on the game screen                                                                     | There was an error in image path in game-data.js file which I corrected                |
+| Game container was going off the screen for iPhone 5/ SE when tested with Chrome DevTools                                                   | Changed offset of game container for screens max-width: 390px                          |
+| When added footer to the game screen it was located at the top of the screen                                                                | Set footer with position absolute                                                      |
+| Whilst the contact form was validated, no data was sent to email                                                                            | Set up an email template and amended code with specific contact_service & contact_form |
+| Game container was going off the background leaving a white space below the background image on mobile and tablet screen in horizontal view | Changed background image position from absolute to fixed                               |
+
 
 ## Deployment
 
