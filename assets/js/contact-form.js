@@ -2,9 +2,12 @@
  * Prevent contact form container going off the mobile screen when clicking on input field & keyboard being shown on screen
 */
 $(document).ready(function () {
-    if ($(window).width() <= 414) {
-        document.getElementsByTagName("input")[0].addEventListener('click', function () {
+    if ($(window).width() <= 740) { //common horizontal viewport dimension of mobile screens
+        document.getElementsByTagName("input")[0].addEventListener("focus", function () {
             document.getElementById("game-container").style.top = "75%";
+        });
+        document.getElementsByTagName("input")[0].addEventListener("blur", function () { //container returns to its default position when input not focused
+            document.getElementById("game-container").style.top = "45%";
         });
     }
 });
