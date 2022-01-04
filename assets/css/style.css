@@ -32,7 +32,7 @@ body {
 
 /* Set up transparency of background image */
 body::before {
-    position: absolute;
+    position: fixed;
     content: "";
     width: 100vw;
     height: 100vh;
