@@ -563,10 +563,10 @@ The website was tested on the following devices:
 | Number of remaining guesses displayed on the cloud icon went below 0                                                                        | Amended code to display 0 when there were no guesses left                              |
 | Images for medium & hard level game were not showing on the game screen                                                                     | There was an error in image path in game-data.js file which I corrected                |
 | Game container was going off the screen for iPhone 5/ SE when tested with Chrome DevTools                                                   | Changed offset of game container for screens max-width: 390px                          |
-| When added footer to the game screen it was located at the top of the screen                                                                | Set footer with position absolute                                                      |
+| When added footer to the game screen it was located at the top of the screen                                                                | Set footer with position fixed                                                         |
 | Whilst the contact form was validated, no data was sent to email                                                                            | Set up an email template and amended code with specific contact_service & contact_form |
 | Game container was going off the background leaving a white space below the background image on mobile and tablet screen in horizontal view | Changed background image position from absolute to fixed                               |
-
+| Contact form username input was pushed off the screen when user clicked on the element, making the input invisible to the user              | Add contact form container offset on username input focus                              |
 
 ## Deployment
 
