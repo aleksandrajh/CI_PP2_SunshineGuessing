@@ -2,7 +2,7 @@
 
 **Developer: Aleksandra Haniok**
 
-[Visit live website](https://aleksandracodes.github.io/CI_PP2_SunshineGuessing/)
+[Visit live website](https://aleksandrajh.github.io/CI_PP2_SunshineGuessing/)
 
 ![Mockup image](docs/ami-responsivedesign-sunshineguessing.PNG)
 
